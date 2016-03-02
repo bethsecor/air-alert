@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Beijing,%2BChina
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 02 Mar 2016 04:45:26 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1259'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "China", "breezometer_aqi": 16, "breezometer_color":
+        "#FF2A00", "breezometer_description": "Poor Air Quality", "country_aqi": 206,
+        "country_aqi_prefix": "", "country_color": "#99004C", "country_description":
+        "Heavy air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "Now is definitely not the time or place for children & infants
+        to be outside", "sport": "We hope you have a treadmill at home\u2026 Don''t
+        go outside for any physical activity", "health": "Why risk it? Refrain from
+        any outdoor activities and be aware of any health issues", "inside": "Do us
+        a favor: stay inside, turn on the A/C, and get comfortable, OK?", "outside":
+        "We have 3 words for you: Don''t go outside"}, "dominant_pollutant_canonical_name":
+        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Wed, 02 Mar 2016 04:45:27 GMT
+recorded_with: VCR 3.0.1
