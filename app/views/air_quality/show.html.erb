@@ -1,3 +1,30 @@
 
-<h4>Air Quality for <%= current_user.location %></h4>
-<%= @air_quality.breezometer_aqi %>
+<div class="container air-quality-box">
+  <h5 class="center">Air Quality for <%= current_user.location %></h5>
+  <hr>
+  <div class="air-quality center" style="color:<%= @air_quality.breezometer_color %>">
+    <div class="air-quality-number">
+      <h1 ><%= @air_quality.breezometer_aqi %></h1>
+    </div>
+
+    <div class="air-quality-text">
+      <h4><%= @air_quality.breezometer_description %></h4>
+    </div>
+  </div>
+
+  <div class="recommendations">
+    <h5>Recommendations</h5><br>
+    <%= @air_quality.random_recommendations[:outside] %>
+  </div>
+
+  <br>
+  <hr>
+
+  <div class="pollutant">
+    <h5>Dominant Pollutant: <%= @air_quality.dominant_pollutant_description %></h5>
+    <p>
+      <%= @air_quality.dominant_pollutant_text[:effects] %>
+      <%= @air_quality.dominant_pollutant_text[:causes] %>
+    </p>
+  </div>
+</div>
