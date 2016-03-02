@@ -2,29 +2,30 @@
   <h4>Sign Up For an Outdoor Air Quality Alert</h4>
 
   <%= form_for @outdoor_alert do |f| %>
-  <%= f.text_field :location %>
-  <%= f.label :location %>
+    <%= render partial: 'shared/errors', locals: {target: @outdoor_alert} %>
+    <%= f.text_field :location %>
+    <%= f.label :location %>
 
-  <%= f.telephone_field :phone %>
-  <%= f.label :phone %>
-  <br><br>
+    <%= f.telephone_field :phone %>
+    <%= f.label :phone %>
+    <br><br>
 
-  <%= f.label :reason, "Reason: " %>
-  <br>
-  <%= f.radio_button(:reason, "general") %> <%= f.label(:reason, "General", value: "general") %>
-  <%= f.radio_button(:reason, "health") %> <%= f.label(:reason, "Health", value: "health") %>
-  <%= f.radio_button(:reason, "children") %> <%= f.label(:reason, "Children", value: "children") %>
-  <%= f.radio_button(:reason, "athlete") %> <%= f.label(:reason, "Athlete", value: "athlete") %>
-  <br><br>
+    <%= f.label :reason, "Reason: " %>
+    <br>
+    <%= f.radio_button(:reason, "general") %> <%= f.label(:reason, "General", value: "general") %>
+    <%= f.radio_button(:reason, "health") %> <%= f.label(:reason, "Health", value: "health") %>
+    <%= f.radio_button(:reason, "children") %> <%= f.label(:reason, "Children", value: "children") %>
+    <%= f.radio_button(:reason, "athlete") %> <%= f.label(:reason, "Athlete", value: "athlete") %>
+    <br><br>
 
-  <%= f.label :level, "Alert me when there is: " %>
-  <br>
-  <%= f.check_box(:poor) %> <%= f.label(:poor, "Poor Air Quality") %>
-  <%= f.check_box(:low) %> <%= f.label(:low, "Low Air Quality") %>
-  <%= f.check_box(:moderate) %> <%= f.label(:moderate, "Moderate Air Quality") %>
-  <%= f.check_box(:fair) %> <%= f.label(:fair, "Fair Air Quality") %>
-  <%= f.check_box(:excellent) %> <%= f.label(:excellent, "Excellent Air Quality") %>
-  <br><br>
-  <%= f.submit "Alert Me!", class: "btn cyan lighten-1" %>
+    <%= f.label :level, "Alert me when there is: " %>
+    <br>
+    <%= f.check_box(:poor) %> <%= f.label(:poor, "Poor Air Quality") %>
+    <%= f.check_box(:low) %> <%= f.label(:low, "Low Air Quality") %>
+    <%= f.check_box(:moderate) %> <%= f.label(:moderate, "Moderate Air Quality") %>
+    <%= f.check_box(:fair) %> <%= f.label(:fair, "Fair Air Quality") %>
+    <%= f.check_box(:excellent) %> <%= f.label(:excellent, "Excellent Air Quality") %>
+    <br><br>
+    <%= f.submit "Alert Me!", class: "btn cyan lighten-1" %>
   <% end %>
 </div>

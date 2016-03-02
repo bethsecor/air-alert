@@ -1,1 +1,35 @@
-<%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1" %>
+<div class="container">
+  <%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1" %>
+
+  <div class="outdoor-alerts">
+    <table>
+        <thead>
+          <tr>
+              <th data-field="location">Location</th>
+              <th data-field="phone">Phone</th>
+              <th data-field="reason">Reason</th>
+              <th data-field="poor">Poor</th>
+              <th data-field="low">Low</th>
+              <th data-field="moderate">Moderate</th>
+              <th data-field="fair">Fair</th>
+              <th data-field="excellent">Excellent</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @outdoor_alerts.each do |out_alert| %>
+          <tr id="outdoor-air-alert-<%=out_alert.id%>">
+            <td><%= out_alert.location.address %></td>
+            <td><%= out_alert.phone.number %></td>
+            <td><%= out_alert.reason.capitalize %></td>
+            <td id="poor-<%=out_alert.id%>"><%= "x" if out_alert.poor %></td>
+            <td id="low-<%=out_alert.id%>"><%= "x" if out_alert.low %></td>
+            <td id="moderate-<%=out_alert.id%>"><%= "x" if out_alert.moderate %></td>
+            <td id="fair-<%=out_alert.id%>"><%= "x" if out_alert.fair %></td>
+            <td id="excellent-<%=out_alert.id%>"><%= "x" if out_alert.excellent %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>

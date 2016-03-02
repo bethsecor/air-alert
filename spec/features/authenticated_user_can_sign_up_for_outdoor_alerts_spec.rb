@@ -20,7 +20,7 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
     expect(current_path).to eq new_outdoor_alert_path
 
     fill_in "Location", with: "Los Angeles"
-    fill_in "Phone", with: "303-931-5611"
+    fill_in "Phone", with: "999-999-9999"
     choose "Health"
     check "Low Air Quality"
     click_on "Alert Me!"
@@ -29,11 +29,11 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
 
     alert = OutdoorAlert.last
 
-    within("#air-alert-#{alert.id}") do
-      expect(page).to have_content(alert.address.location)
+    within("#outdoor-air-alert-#{alert.id}") do
+      expect(page).to have_content(alert.location.address)
       expect(page).to have_content(alert.phone.number)
-      expect(page).to have_content(alert.reason)
-      within("low-#{alert.id}") do
+      expect(page).to have_content(alert.reason.capitalize)
+      within("#low-#{alert.id}") do
         expect(page).to have_content("x")
       end
     end
