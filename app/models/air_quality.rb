@@ -4,7 +4,7 @@ class AirQuality
   end
 
   def self.air_quality(location)
-    build_object(service.air_quality(location.gsub(" ", "+")))
+    build_object(service.air_quality(location.gsub(" ", "+").gsub(",","")))
   end
 
   private

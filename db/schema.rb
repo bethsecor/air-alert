@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229204402) do
+ActiveRecord::Schema.define(version: 20160302185715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "outdoor_alerts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "location_id"
+    t.integer  "phone_id"
+    t.string   "reason"
+    t.boolean  "poor"
+    t.boolean  "low"
+    t.boolean  "moderate"
+    t.boolean  "fair"
+    t.boolean  "excellent"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "outdoor_alerts", ["location_id"], name: "index_outdoor_alerts_on_location_id", using: :btree
+  add_index "outdoor_alerts", ["phone_id"], name: "index_outdoor_alerts_on_phone_id", using: :btree
+  add_index "outdoor_alerts", ["user_id"], name: "index_outdoor_alerts_on_user_id", using: :btree
+
+  create_table "phones", force: :cascade do |t|
+    t.string   "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "uid"
@@ -28,4 +58,7 @@ ActiveRecord::Schema.define(version: 20160229204402) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "outdoor_alerts", "locations"
+  add_foreign_key "outdoor_alerts", "phones"
+  add_foreign_key "outdoor_alerts", "users"
 end

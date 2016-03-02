@@ -3,7 +3,7 @@
 
 <div class="container air-quality-search center">
   <%= form_for :air_quality_search, url: airquality_path, method: "get" do |f| %>
-    <%= f.label :address, "Address" %>
+    <%= f.label :address, "Location" %>
     <%= f.text_field :address %>
     <br>
     <%= f.submit "Get Air Quality", class: "btn cyan lighten-1" %>

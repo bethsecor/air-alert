@@ -12,7 +12,7 @@ RSpec.feature "AuthenticatedUserCanSearchForAirQualityByLocations", type: :featu
       click_on "Login with Twitter"
       expect(current_path).to eq(airquality_path)
 
-      fill_in "Address", with: "Beijing, China"
+      fill_in "Location", with: "Beijing, China"
 
       VCR.use_cassette("breezometer_service#air_quality_search") do
         click_on "Get Air Quality"

@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/airquality', to: 'air_quality#show'
+  get '/alerts', to: 'alerts#index'
+
+  resources :outdoor_alerts, only: [:new, :create]
 end
