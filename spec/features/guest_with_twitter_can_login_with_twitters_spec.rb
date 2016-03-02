@@ -4,8 +4,10 @@ RSpec.feature "GuestWithTwitterCanLoginWithTwitters", type: :feature do
   it "can authorize a user with their twitter account" do
     visit root_path
 
-    click_on "Login with Twitter"
+    VCR.use_cassette("breezometer_service#air_quality") do
+      click_on "Login with Twitter"
 
-    expect(current_path).to eq(airquality_path)
+      expect(current_path).to eq(airquality_path)
+    end
   end
 end
