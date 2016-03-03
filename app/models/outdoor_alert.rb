@@ -22,6 +22,6 @@ class OutdoorAlert < ActiveRecord::Base
       :to => "+#{self.phone.number}",
       :body => welcome
     )
-    puts message.to
+    # puts message.to
   end
 end

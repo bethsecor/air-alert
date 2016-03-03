@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Los%2BAngeles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 03 Mar 2016 20:41:47 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1356'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "United States", "breezometer_aqi": 43, "breezometer_color":
+        "#FFD600", "breezometer_description": "Moderate Air Quality", "country_aqi":
+        90, "country_aqi_prefix": "", "country_color": "#FFFF00", "country_description":
+        "Moderate air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "Pay attention to the respiratory status of your kid(s)", "sport":
+        "You should look for an alternative area with better air quality to work out",
+        "health": "There is no real danger for people with health sensitivities. Just
+        keep an eye out for changes in air quality for the next few hours", "inside":
+        "We''re not going to tell you not to go outside, but you should continue tracking
+        the air quality around you", "outside": "The air quality outside isn''t the
+        best\u2026 try to find a cleaner area"}, "dominant_pollutant_canonical_name":
+        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Thu, 03 Mar 2016 20:41:47 GMT
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Los%2BAngeles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 03 Mar 2016 20:41:50 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1366'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "United States", "breezometer_aqi": 43, "breezometer_color":
+        "#FFD600", "breezometer_description": "Moderate Air Quality", "country_aqi":
+        90, "country_aqi_prefix": "", "country_color": "#FFFF00", "country_description":
+        "Moderate air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "Pay attention to signs of respiratory distress in small children",
+        "sport": "You should look for an alternative area with better air quality
+        to work out", "health": "Exposure to air hazards is dangerous for people with
+        health sensitivities, so it is important to monitor air quality at this time",
+        "inside": "You don''t have to stay inside, but it''s recommended that you
+        keep tracking the air quality", "outside": "If you wish to stay outside for
+        a long time, you should try to find a cleaner place nearby"}, "dominant_pollutant_canonical_name":
+        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Thu, 03 Mar 2016 20:41:50 GMT
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Welcome+to+Air+Alerts%21+You+will+receive+air+quality+updates+for+Los+Angeles.
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 03 Mar 2016 20:41:51 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.044'
+      Twilio-Request-Id:
+      - RQ857e805179a34738a1484a63f0404090
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '835'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM4fc5d58ed6204f73bc3e37a008a02413", "date_created": "Thu,
+        03 Mar 2016 20:41:51 +0000", "date_updated": "Thu, 03 Mar 2016 20:41:51 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Welcome to Air Alerts! You will receive
+        air quality updates for Los Angeles.", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM4fc5d58ed6204f73bc3e37a008a02413.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM4fc5d58ed6204f73bc3e37a008a02413/Media.json"}}'
+    http_version: 
+  recorded_at: Thu, 03 Mar 2016 20:41:51 GMT
+recorded_with: VCR 3.0.1

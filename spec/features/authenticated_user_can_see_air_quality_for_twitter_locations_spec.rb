@@ -16,8 +16,8 @@ RSpec.feature "AuthenticatedUserCanSeeAirQualityForTwitterLocations", type: :fea
 
       within('.air-quality-box') do
         expect(page).to have_content("Air Quality for #{location}")
-        expect(page).to have_content("72")
-        expect(page).to have_content("Fair Air Quality")
+        expect(page).to have_content("83")
+        expect(page).to have_content("Excellent Air Quality")
         expect(page).to have_content("Dominant Pollutant: Nitrogen dioxide")
       end
     end

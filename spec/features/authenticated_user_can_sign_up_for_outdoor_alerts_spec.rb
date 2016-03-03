@@ -19,11 +19,14 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
     click_on "Create Outdoor Air Quality Alert"
     expect(current_path).to eq new_outdoor_alert_path
 
-    fill_in "Location", with: "Los Angeles"
-    fill_in "Phone", with: "999-999-9999"
+    fill_in "Address", with: "Los Angeles"
+    fill_in "Number", with: "303-931-5611"
     choose "Health"
     check "Low Air Quality"
-    click_on "Alert Me!"
+
+    VCR.use_cassette("breezometer_service#air_quality_check") do
+      click_on "Alert Me!"
+    end
 
     expect(current_path).to eq alerts_path
 

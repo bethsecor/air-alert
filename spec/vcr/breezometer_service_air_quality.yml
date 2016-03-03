@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Denver%2BCO
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Denver,%2BCO
     body:
       encoding: US-ASCII
       string: ''
@@ -25,25 +25,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Mar 2016 17:44:20 GMT
+      - Thu, 03 Mar 2016 20:31:50 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1411'
+      - '1245'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 72, "breezometer_color":
-        "#7BCB33", "breezometer_description": "Fair Air Quality", "country_aqi": 33,
-        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+      string: '{"country_name": "United States", "breezometer_aqi": 83, "breezometer_color":
+        "#4AB936", "breezometer_description": "Excellent Air Quality", "country_aqi":
+        19, "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
         "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "You should supervise your children in the coming hours and monitor
-        changes in air quality", "sport": "You can go on a run - just keep your nose
-        open for any changes!", "health": "Exposure to air hazards is dangerous for
-        people with health sensitivities, so it is important to monitor air quality
-        at this time", "inside": "The amount of pollutants in the air is noticeable,
-        but still there is no danger to your health - It is recommended to continue
-        monitoring changes in the coming hours", "outside": "It''s still OK to go
-        out and enjoy a stroll, just pay attention for changes in air quality"}, "dominant_pollutant_canonical_name":
+        {"children": "Hip Hip, Hooray! What a wonderful atmosphere for kids! Don''t
+        wait at home with them another minute!", "sport": "This is an excellent opportunity
+        to enjoy your favorite outdoor activity without any worries", "health": "This
+        air quality is excellent for people with respiratory sensitivities", "inside":
+        "Ventilate the house with the great air outside", "outside": "It''s an ideal
+        time to go outside and enjoy the fresh air"}, "dominant_pollutant_canonical_name":
         "no2", "dominant_pollutant_description": "Nitrogen dioxide", "dominant_pollutant_text":
         {"main": "The dominant pollutant is nitrogen dioxide (NO\u2082).", "effects":
         "Exposure may cause increased bronchial reactivity in patients with asthma,
@@ -51,5 +49,5 @@ http_interactions:
         infections, especially in young children", "causes": "Main sources are fuel
         burning processes in industry and transportation."}}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 17:44:20 GMT
+  recorded_at: Thu, 03 Mar 2016 20:31:50 GMT
 recorded_with: VCR 3.0.1

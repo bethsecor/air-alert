@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Beijing%2BChina
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Beijing,%2BChina
     body:
       encoding: US-ASCII
       string: ''
@@ -25,23 +25,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Mar 2016 17:46:00 GMT
+      - Thu, 03 Mar 2016 20:31:52 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1255'
+      - '1266'
     body:
       encoding: UTF-8
-      string: '{"country_name": "China", "breezometer_aqi": 16, "breezometer_color":
-        "#FF2A00", "breezometer_description": "Poor Air Quality", "country_aqi": 217,
-        "country_aqi_prefix": "", "country_color": "#99004C", "country_description":
-        "Heavy air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
+      string: '{"country_name": "China", "breezometer_aqi": 8, "breezometer_color":
+        "#E50000", "breezometer_description": "Poor Air Quality", "country_aqi": 346,
+        "country_aqi_prefix": "", "country_color": "#7E0023", "country_description":
+        "Severe air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
         {"children": "Children & infants should not be outside in these air conditions",
-        "sport": "We recommend not to perform any strenuous physical activity in the
-        open air", "health": "Why risk it? Refrain from any outdoor activities and
-        be aware of any health issues", "inside": "It is best to be at home! Close
-        the windows, activate the air conditioner & stay inside", "outside": "We have
-        3 words for you: Don''t go outside"}, "dominant_pollutant_canonical_name":
+        "sport": "We hope you have a treadmill at home\u2026 Don''t go outside for
+        any physical activity", "health": "This is the kind of poor air quality that
+        the doctors warned you about. Don''t go outside now", "inside": "What you
+        need to do ASAP is close the windows and activate the air conditioner", "outside":
+        "We have 3 words for you: Don''t go outside"}, "dominant_pollutant_canonical_name":
         "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
         "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
         matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
@@ -50,5 +50,5 @@ http_interactions:
         sources are fuel burning processes in industry, transportation and indoor
         heating."}}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 17:46:00 GMT
+  recorded_at: Thu, 03 Mar 2016 20:31:52 GMT
 recorded_with: VCR 3.0.1
