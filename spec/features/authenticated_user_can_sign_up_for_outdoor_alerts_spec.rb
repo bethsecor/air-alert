@@ -20,7 +20,7 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
     expect(current_path).to eq new_outdoor_alert_path
 
     fill_in "Address", with: "Los Angeles"
-    fill_in "Number", with: "303-931-5611"
+    fill_in "Number", with: ENV['VALID_PHONE']
     choose "Health"
     check "Low Air Quality"
 
@@ -40,6 +40,5 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
         expect(page).to have_content("x")
       end
     end
-
   end
 end

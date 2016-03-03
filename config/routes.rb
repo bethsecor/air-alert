@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/airquality', to: 'air_quality#show'
   get '/alerts', to: 'alerts#index'
 
-  resources :outdoor_alerts, only: [:new, :create]
+  resources :outdoor_alerts, only: [:new, :create, :destroy]
 end

@@ -11,6 +11,7 @@ require 'capybara/rails'
 require 'capybara/rspec'
 require 'factories'
 require 'simplecov'
+require 'mocha/setup'
 
 SimpleCov.start 'rails'
 

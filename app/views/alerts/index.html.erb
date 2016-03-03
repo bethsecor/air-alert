@@ -13,6 +13,7 @@
               <th data-field="moderate">Moderate</th>
               <th data-field="fair">Fair</th>
               <th data-field="excellent">Excellent</th>
+              <th data-field="actions">Actions</th>
           </tr>
         </thead>
 
@@ -27,6 +28,7 @@
             <td id="moderate-<%=out_alert.id%>"><%= "x" if out_alert.moderate == 1 %></td>
             <td id="fair-<%=out_alert.id%>"><%= "x" if out_alert.fair == 1 %></td>
             <td id="excellent-<%=out_alert.id%>"><%= "x" if out_alert.excellent == 1 %></td>
+            <td><%= link_to "Delete", outdoor_alert_path(id: out_alert.id), method: :delete %></td>
           </tr>
           <% end %>
         </tbody>

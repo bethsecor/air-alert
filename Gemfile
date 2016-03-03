@@ -14,6 +14,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'faraday'
 gem 'twilio-ruby'
+gem "skylight"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -38,4 +39,5 @@ group :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'mocha'
 end

@@ -19,6 +19,12 @@ class OutdoorAlertsController < ApplicationController
     end
   end
 
+  def destroy
+    @outdoor_alert = OutdoorAlert.find(params[:id])
+    @outdoor_alert.delete
+    redirect_to alerts_path
+  end
+
   private
 
   def outdoor_alert_params
