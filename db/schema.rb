@@ -26,14 +26,14 @@ ActiveRecord::Schema.define(version: 20160302185715) do
     t.integer  "user_id"
     t.integer  "location_id"
     t.integer  "phone_id"
-    t.string   "reason"
-    t.boolean  "poor"
-    t.boolean  "low"
-    t.boolean  "moderate"
-    t.boolean  "fair"
-    t.boolean  "excellent"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "reason",      default: "general"
+    t.integer  "poor",        default: 0
+    t.integer  "low",         default: 0
+    t.integer  "moderate",    default: 0
+    t.integer  "fair",        default: 0
+    t.integer  "excellent",   default: 0
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "outdoor_alerts", ["location_id"], name: "index_outdoor_alerts_on_location_id", using: :btree

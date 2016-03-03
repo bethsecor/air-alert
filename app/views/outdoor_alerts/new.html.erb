@@ -3,11 +3,18 @@
 
   <%= form_for @outdoor_alert do |f| %>
     <%= render partial: 'shared/errors', locals: {target: @outdoor_alert} %>
-    <%= f.text_field :location %>
-    <%= f.label :location %>
 
-    <%= f.telephone_field :phone %>
-    <%= f.label :phone %>
+    <%= fields_for @location do |l| %>
+      <%= render partial: 'shared/errors', locals: {target: @location} %>
+      <%= l.text_field :address %>
+      <%= l.label :address %>
+    <% end %>
+
+    <%= fields_for @phone do |n| %>
+      <%= render partial: 'shared/errors', locals: {target: @phone} %>
+      <%= n.telephone_field :number %>
+      <%= n.label :number %>
+    <% end %>
     <br><br>
 
     <%= f.label :reason, "Reason: " %>

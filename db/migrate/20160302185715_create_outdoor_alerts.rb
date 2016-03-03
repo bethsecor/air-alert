@@ -4,12 +4,12 @@ class CreateOutdoorAlerts < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
       t.references :location, index: true, foreign_key: true
       t.references :phone, index: true, foreign_key: true
-      t.string :reason
-      t.boolean :poor
-      t.boolean :low
-      t.boolean :moderate
-      t.boolean :fair
-      t.boolean :excellent
+      t.string :reason, default: "general"
+      t.integer :poor, default: 0
+      t.integer :low, default: 0
+      t.integer :moderate, default: 0
+      t.integer :fair, default: 0
+      t.integer :excellent, default: 0
 
       t.timestamps null: false
     end

@@ -22,11 +22,11 @@
             <td><%= out_alert.location.address %></td>
             <td><%= out_alert.phone.number %></td>
             <td><%= out_alert.reason.capitalize %></td>
-            <td id="poor-<%=out_alert.id%>"><%= "x" if out_alert.poor %></td>
-            <td id="low-<%=out_alert.id%>"><%= "x" if out_alert.low %></td>
-            <td id="moderate-<%=out_alert.id%>"><%= "x" if out_alert.moderate %></td>
-            <td id="fair-<%=out_alert.id%>"><%= "x" if out_alert.fair %></td>
-            <td id="excellent-<%=out_alert.id%>"><%= "x" if out_alert.excellent %></td>
+            <td id="poor-<%=out_alert.id%>"><%= "x" if out_alert.poor == 1 %></td>
+            <td id="low-<%=out_alert.id%>"><%= "x" if out_alert.low == 1 %></td>
+            <td id="moderate-<%=out_alert.id%>"><%= "x" if out_alert.moderate == 1 %></td>
+            <td id="fair-<%=out_alert.id%>"><%= "x" if out_alert.fair == 1 %></td>
+            <td id="excellent-<%=out_alert.id%>"><%= "x" if out_alert.excellent == 1 %></td>
           </tr>
           <% end %>
         </tbody>

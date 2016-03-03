@@ -1,6 +1,8 @@
 class Phone < ActiveRecord::Base
   has_many :outdoor_alerts
-  before_create :sanitize_phone
+  before_validation :sanitize_phone
+
+  validates :number, presence: true, length: { in: 10..11 }
 
   def sanitize_phone
     self.number = number.gsub(/[^0-9]/, '')
