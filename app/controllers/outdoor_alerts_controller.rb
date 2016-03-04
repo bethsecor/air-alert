@@ -12,7 +12,6 @@ class OutdoorAlertsController < ApplicationController
                                                                  phone_params,
                                                                  outdoor_alert_params,
                                                                  current_user)
-    # if @location.save & @phone.save & @outdoor_alert.save
     if @location.errors.messages.empty? & @phone.errors.messages.empty? & @outdoor_alert.save
       @outdoor_alert.initial_alert
       flash[:success] = "Outdoor Air Alert created!"
@@ -27,7 +26,6 @@ class OutdoorAlertsController < ApplicationController
                                                                    location_params,
                                                                    phone_params,
                                                                    outdoor_alert_params)
-    # if @location.save & @phone.save & @outdoor_alert.save
     if @location.errors.messages.empty? & @phone.errors.messages.empty? & @outdoor_alert.save
       flash[:success] = "Outdoor Air Alert updated!"
       redirect_to alerts_path
