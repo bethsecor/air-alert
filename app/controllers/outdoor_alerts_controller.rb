@@ -21,7 +21,12 @@ class OutdoorAlertsController < ApplicationController
 
   def destroy
     @outdoor_alert = OutdoorAlert.find(params[:id])
+    @location = @outdoor_alert.location
+    @phone = @outdoor_alert.phone
     @outdoor_alert.delete
+    @location.delete if @location.outdoor_alerts.empty?
+    @phone.delete if @phone.outdoor_alerts.empty?
+
     redirect_to alerts_path
   end
 

@@ -14,7 +14,7 @@
 <%= render partial: 'shared/navbar' %>
 
 <% flash.each do |type, message| %>
-  <%= content_tag :div, sanitize(message), class: "flash_#{type}" %>
+  <%= content_tag :div, sanitize(message), class: "flash_#{type} flash" %>
 <% end %>
 
 <%= yield %>
