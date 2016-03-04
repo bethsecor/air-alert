@@ -12,7 +12,7 @@ RSpec.feature "AuthenticatedUserCanSearchForAirQualityByLocations", type: :featu
       click_on "Login with Twitter"
       expect(current_path).to eq(airquality_path)
 
-      fill_in "Address", with: "Beijing, China"
+      fill_in "Location", with: "Beijing, China"
 
       VCR.use_cassette("breezometer_service#air_quality_search") do
         click_on "Get Air Quality"
@@ -20,7 +20,7 @@ RSpec.feature "AuthenticatedUserCanSearchForAirQualityByLocations", type: :featu
         expect(current_path).to eq(airquality_path)
         within('.air-quality-box') do
           expect(page).to have_content("Air Quality for Beijing")
-          expect(page).to have_content("16")
+          expect(page).to have_content("8")
           expect(page).to have_content("Poor Air Quality")
           expect(page).to have_content("Dominant Pollutant: Fine particulate matter (<2.5µm)")
         end

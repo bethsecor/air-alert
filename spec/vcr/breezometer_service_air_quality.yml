@@ -25,32 +25,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Mar 2016 03:36:39 GMT
+      - Thu, 03 Mar 2016 20:31:50 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1459'
+      - '1245'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 74, "breezometer_color":
-        "#72C833", "breezometer_description": "Fair Air Quality", "country_aqi": 32,
-        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+      string: '{"country_name": "United States", "breezometer_aqi": 83, "breezometer_color":
+        "#4AB936", "breezometer_description": "Excellent Air Quality", "country_aqi":
+        19, "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
         "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "You should supervise your children in the coming hours and monitor
-        changes in air quality", "sport": "Since we inhale more air during sports,
-        you should keep track of changes in air quality for the next few hours", "health":
-        "People with health sensitivities should monitor the air quality in the next
-        few hours", "inside": "The amount of pollutants in the air is noticeable,
-        but still there is no danger to health - It is recommended to watch for changes",
-        "outside": "It''s still OK to go out and enjoy a stroll, just pay attention
-        for changes in air quality"}, "dominant_pollutant_canonical_name": "o3", "dominant_pollutant_description":
-        "Ozone", "dominant_pollutant_text": {"main": "The dominant pollutant is ozone
-        (O\u2083).", "effects": "Ozone can irritate the airways causing coughing,
-        a burning sensation, wheezing and shortness of breath. Children, people with
-        respiratory or lung and heart diseases, elderly and those who exercise outdoors
-        are particularly vulnerable to ozone exposure.", "causes": "Ozone is created
-        in a chemical reaction between atmospheric oxygen, nitrogen oxides, organic
-        compounds and sunlight."}}'
+        {"children": "Hip Hip, Hooray! What a wonderful atmosphere for kids! Don''t
+        wait at home with them another minute!", "sport": "This is an excellent opportunity
+        to enjoy your favorite outdoor activity without any worries", "health": "This
+        air quality is excellent for people with respiratory sensitivities", "inside":
+        "Ventilate the house with the great air outside", "outside": "It''s an ideal
+        time to go outside and enjoy the fresh air"}, "dominant_pollutant_canonical_name":
+        "no2", "dominant_pollutant_description": "Nitrogen dioxide", "dominant_pollutant_text":
+        {"main": "The dominant pollutant is nitrogen dioxide (NO\u2082).", "effects":
+        "Exposure may cause increased bronchial reactivity in patients with asthma,
+        lung function decline in patients with COPD and increased risk of respiratory
+        infections, especially in young children", "causes": "Main sources are fuel
+        burning processes in industry and transportation."}}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 03:36:39 GMT
+  recorded_at: Thu, 03 Mar 2016 20:31:50 GMT
 recorded_with: VCR 3.0.1

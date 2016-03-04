@@ -25,22 +25,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 02 Mar 2016 04:45:26 GMT
+      - Thu, 03 Mar 2016 20:31:52 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1259'
+      - '1266'
     body:
       encoding: UTF-8
-      string: '{"country_name": "China", "breezometer_aqi": 16, "breezometer_color":
-        "#FF2A00", "breezometer_description": "Poor Air Quality", "country_aqi": 206,
-        "country_aqi_prefix": "", "country_color": "#99004C", "country_description":
-        "Heavy air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "Now is definitely not the time or place for children & infants
-        to be outside", "sport": "We hope you have a treadmill at home\u2026 Don''t
-        go outside for any physical activity", "health": "Why risk it? Refrain from
-        any outdoor activities and be aware of any health issues", "inside": "Do us
-        a favor: stay inside, turn on the A/C, and get comfortable, OK?", "outside":
+      string: '{"country_name": "China", "breezometer_aqi": 8, "breezometer_color":
+        "#E50000", "breezometer_description": "Poor Air Quality", "country_aqi": 346,
+        "country_aqi_prefix": "", "country_color": "#7E0023", "country_description":
+        "Severe air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "Children & infants should not be outside in these air conditions",
+        "sport": "We hope you have a treadmill at home\u2026 Don''t go outside for
+        any physical activity", "health": "This is the kind of poor air quality that
+        the doctors warned you about. Don''t go outside now", "inside": "What you
+        need to do ASAP is close the windows and activate the air conditioner", "outside":
         "We have 3 words for you: Don''t go outside"}, "dominant_pollutant_canonical_name":
         "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
         "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
@@ -50,5 +50,5 @@ http_interactions:
         sources are fuel burning processes in industry, transportation and indoor
         heating."}}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 04:45:27 GMT
+  recorded_at: Thu, 03 Mar 2016 20:31:52 GMT
 recorded_with: VCR 3.0.1
