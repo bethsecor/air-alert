@@ -7,7 +7,7 @@ class Location < ActiveRecord::Base
   def address_must_be_supported_by_breezometer
     breezometer_service_errors = AirQuality.air_quality(self.address).error
     if breezometer_service_errors
-      errors.add(:address, "Location not supported, please try another location.")
+      errors.add(:location, "not supported, please try another location.")
     end
   end
 end
