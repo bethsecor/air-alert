@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Los%2BAngeles
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Denver,%2BCO
     body:
       encoding: US-ASCII
       string: ''
@@ -25,76 +25,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 04 Mar 2016 04:11:06 GMT
+      - Sun, 06 Mar 2016 02:37:56 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1412'
+      - '1448'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 47, "breezometer_color":
-        "#FFED00", "breezometer_description": "Moderate Air Quality", "country_aqi":
-        80, "country_aqi_prefix": "", "country_color": "#FFFF00", "country_description":
-        "Moderate air quality", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "You can go outside with the kids, but monitor their breathing
-        & pay attention to notifications", "sport": "You should look for an alternative
-        area with better air quality to work out", "health": "Exposure to air hazards
-        is dangerous for people with health sensitivities, so it is important to monitor
-        air quality at this time", "inside": "We''re not going to tell you not to
-        go outside, but you should continue tracking the air quality around you",
-        "outside": "If you wish to stay outside for a long time, you should try to
-        find a cleaner place nearby"}, "dominant_pollutant_canonical_name": "pm2.5",
-        "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
-        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
-        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
-        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
-        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
-        sources are fuel burning processes in industry, transportation and indoor
-        heating."}}'
-    http_version: 
-  recorded_at: Fri, 04 Mar 2016 04:11:06 GMT
-- request:
-    method: get
-    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Los%2BAngeles
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - no-cache
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Fri, 04 Mar 2016 04:11:15 GMT
-      Server:
-      - Google Frontend
-      Content-Length:
-      - '1272'
-    body:
-      encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 47, "breezometer_color":
-        "#FFED00", "breezometer_description": "Moderate Air Quality", "country_aqi":
-        80, "country_aqi_prefix": "", "country_color": "#FFFF00", "country_description":
-        "Moderate air quality", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "Pay attention to the respiratory status of your kid(s)", "sport":
-        "You want to work out now??!\u2026 Only if you have no plan B", "health":
-        "People with health sensitivities should be prepared for minor respiratory
-        difficulties", "inside": "There''s no need to get worried, but keep tracking
-        air quality in the next few hours", "outside": "The air quality outside isn''t
-        the best\u2026 try to find a cleaner area"}, "dominant_pollutant_canonical_name":
+      string: '{"country_name": "United States", "breezometer_aqi": 72, "breezometer_color":
+        "#7BCB33", "breezometer_description": "Fair Air Quality", "country_aqi": 33,
+        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+        "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "You should supervise your children in the coming hours and monitor
+        changes in air quality", "sport": "You can go on a run - just keep your nose
+        open for any changes!", "health": "There is no real danger for people with
+        health sensitivities. Just keep an eye out for changes in air quality for
+        the next few hours", "inside": "The amount of pollutants in the air is noticeable,
+        but still there is no danger to your health - It is recommended to continue
+        monitoring changes in the coming hours", "outside": "It''s still OK to go
+        out and enjoy a stroll, just pay attention for changes in air quality"}, "dominant_pollutant_canonical_name":
         "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
         "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
         matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
@@ -103,5 +52,5 @@ http_interactions:
         sources are fuel burning processes in industry, transportation and indoor
         heating."}}'
     http_version: 
-  recorded_at: Fri, 04 Mar 2016 04:11:15 GMT
+  recorded_at: Sun, 06 Mar 2016 02:37:56 GMT
 recorded_with: VCR 3.0.1

@@ -25,30 +25,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 03 Mar 2016 20:31:52 GMT
+      - Sun, 06 Mar 2016 02:37:52 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1266'
+      - '1227'
     body:
       encoding: UTF-8
-      string: '{"country_name": "China", "breezometer_aqi": 8, "breezometer_color":
-        "#E50000", "breezometer_description": "Poor Air Quality", "country_aqi": 346,
-        "country_aqi_prefix": "", "country_color": "#7E0023", "country_description":
-        "Severe air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "Children & infants should not be outside in these air conditions",
-        "sport": "We hope you have a treadmill at home\u2026 Don''t go outside for
-        any physical activity", "health": "This is the kind of poor air quality that
-        the doctors warned you about. Don''t go outside now", "inside": "What you
-        need to do ASAP is close the windows and activate the air conditioner", "outside":
-        "We have 3 words for you: Don''t go outside"}, "dominant_pollutant_canonical_name":
-        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
-        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
-        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+      string: '{"country_name": "China", "breezometer_aqi": 30, "breezometer_color":
+        "#FF8C00", "breezometer_description": "Low Air Quality", "country_aqi": 123,
+        "country_aqi_prefix": "", "country_color": "#FF7E00", "country_description":
+        "Light air pollution", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "Keep calm and stay indoors. Do it for the kids\u2026", "sport":
+        "You don\u2019t want to do your workout in this environment. Find a cleaner
+        area", "health": "There is a strong chance for respiratory distress for those
+        with respiratory sensitivities", "inside": "It is a good idea to stay in closed
+        & air conditioned places", "outside": "You don''t have to stay inside but
+        try to find a cleaner place in the area"}, "dominant_pollutant_canonical_name":
+        "pm10", "dominant_pollutant_description": "Inhalable particulate matter (<10\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is inhalable particulate
+        matter (PM10).", "effects": "Particles enter the lungs and cause local and
         systemic inflammation in the respiratory system & heart, thus cause cardiovascular
         and respiratory diseases such as asthma and bronchitis.", "causes": "Main
-        sources are fuel burning processes in industry, transportation and indoor
-        heating."}}'
+        sources are natural dust, smoke and pollen."}}'
     http_version: 
-  recorded_at: Thu, 03 Mar 2016 20:31:52 GMT
+  recorded_at: Sun, 06 Mar 2016 02:37:52 GMT
 recorded_with: VCR 3.0.1

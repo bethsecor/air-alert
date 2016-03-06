@@ -19,7 +19,7 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
     click_on "Create Outdoor Air Quality Alert"
     expect(current_path).to eq new_outdoor_alert_path
 
-    fill_in "Address", with: "Los Angeles"
+    fill_in "Address", with: "Denver, CO"
     fill_in "Number", with: ENV['VALID_PHONE']
     choose "Health"
     check "Low Air Quality"
@@ -27,7 +27,7 @@ RSpec.feature "AuthenticatedUserCanSignUpForOutdoorAlerts", type: :feature do
     VCR.use_cassette("breezometer_service#air_quality_check") do
       click_on "Alert Me!"
     end
-
+    
     expect(current_path).to eq alerts_path
 
     alert = OutdoorAlert.last

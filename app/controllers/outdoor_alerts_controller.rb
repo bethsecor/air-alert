@@ -1,5 +1,6 @@
 class OutdoorAlertsController < ApplicationController
   before_action :find_outdoor_alert_objects, only: [:edit, :destroy]
+  # rescue_from Twilio::REST::RequestError, with: :twilio_bad_request
 
   def new
     @outdoor_alert = OutdoorAlert.new
@@ -65,4 +66,9 @@ class OutdoorAlertsController < ApplicationController
   def location_params
     params.require(:location).permit(:address)
   end
+
+  # def twilio_bad_request
+  #   flash[:alert] = 'The phone number you entered was not valid.'
+  #   redirect_to new_outdoor_alert_path
+  # end
 end
