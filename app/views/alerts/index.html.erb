@@ -5,7 +5,9 @@
     <hr>
     <%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1 right" %>
   </div>
+  <br><br><br>
   <div class="indoor-alerts">
+    <h4>Air Filter Replacement Reminders</h4>
     <%= render partial: 'indoor_alerts' %>
     <hr>
     <%= link_to "Create Air Filter Replacement Reminder", new_indoor_alert_path, class: "btn cyan lighten-1 right" %>
