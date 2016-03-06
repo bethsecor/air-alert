@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/alerts', to: 'alerts#index'
 
   resources :outdoor_alerts, only: [:new, :create, :destroy, :edit, :update]
+  resources :indoor_alerts, only: [:new, :create, :destroy, :edit, :update]
 end

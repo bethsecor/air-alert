@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302185715) do
+ActiveRecord::Schema.define(version: 20160306214622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "indoor_alerts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "date"
+    t.integer  "phone_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "indoor_alerts", ["phone_id"], name: "index_indoor_alerts_on_phone_id", using: :btree
+  add_index "indoor_alerts", ["user_id"], name: "index_indoor_alerts_on_user_id", using: :btree
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
@@ -58,6 +70,8 @@ ActiveRecord::Schema.define(version: 20160302185715) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "indoor_alerts", "phones"
+  add_foreign_key "indoor_alerts", "users"
   add_foreign_key "outdoor_alerts", "locations"
   add_foreign_key "outdoor_alerts", "phones"
   add_foreign_key "outdoor_alerts", "users"

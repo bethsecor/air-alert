@@ -1,0 +1,18 @@
+<h4>Set up a reminder to change an air filter:</h4>
+<%= form_for @indoor_alert do |f| %>
+  <%= render partial: 'shared/errors', locals: {target: @indoor_alert} %>
+
+  <%= f.text_field :name %>
+  <%= f.label :name, "Air Filter Name" %>
+  <br>
+  <%= f.text_field :date %>
+  <%= f.label :date, "Remind me on:" %>
+  <br>
+  <%= fields_for @phone do |n| %>
+    <%= render partial: 'shared/errors', locals: {target: @phone} %>
+    <%= n.telephone_field :number %>
+    <%= n.label :number, "Phone Number" %>
+  <% end %>
+  <br><br><br>
+  <%= f.submit "Remind Me!" %>
+<% end %>
