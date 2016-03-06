@@ -29,6 +29,14 @@ FactoryGirl.define do
     moderate 0
     low [0,1].sample
     poor 1
+
+    factory :outdoor_alert_all_levels do
+      excellent 1
+      fair 1
+      moderate 1
+      low 1
+      poor 1
+    end
   end
 
   factory :location do

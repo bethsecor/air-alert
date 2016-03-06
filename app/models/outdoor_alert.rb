@@ -21,7 +21,7 @@ class OutdoorAlert < ActiveRecord::Base
       :to => "+#{self.phone.number}",
       :body => welcome
     )
-    # puts message.to
+    message.body
   end
 
   def self.specific(quality)
