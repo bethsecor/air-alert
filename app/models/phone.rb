@@ -11,7 +11,6 @@ class Phone < ActiveRecord::Base
   end
 
   def proper_phone_number
-    binding.pry
     unless self.valid_number?
       errors.add(:phone, "number is not a valid, please try another number.")
     end
