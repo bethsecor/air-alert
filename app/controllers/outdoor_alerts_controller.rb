@@ -68,7 +68,7 @@ class OutdoorAlertsController < ApplicationController
   end
 
   def twilio_bad_request
-    flash[:alert] = 'The phone number you entered was not valid.'
-    redirect_to new_outdoor_alert_path
+    flash[:alert] = 'The phone number you entered was not valid. Please delete alert.'
+    redirect_to alerts_path
   end
 end
