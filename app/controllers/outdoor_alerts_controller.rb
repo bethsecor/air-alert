@@ -41,7 +41,7 @@ class OutdoorAlertsController < ApplicationController
   def destroy
     @outdoor_alert.delete
     @location.delete if @location.outdoor_alerts.empty?
-    @phone.delete if @phone.outdoor_alerts.empty?
+    @phone.delete if @phone.outdoor_alerts.empty? & @phone.indoor_alerts.empty?
 
     redirect_to alerts_path
   end

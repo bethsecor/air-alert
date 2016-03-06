@@ -1,5 +1,5 @@
 class IndoorAlertsController < ApplicationController
-  before_action :find_indoor_alert_objects, only: [:edit]
+  before_action :find_indoor_alert_objects, only: [:edit, :destroy]
   rescue_from Twilio::REST::RequestError, with: :twilio_bad_request
 
   def new
@@ -33,6 +33,13 @@ class IndoorAlertsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @indoor_alert.delete
+    @phone.delete if @phone.indoor_alerts.empty? & @phone.outdoor_alerts.empty?
+
+    redirect_to alerts_path
   end
 
   private
