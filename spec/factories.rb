@@ -17,6 +17,16 @@ FactoryGirl.define do
         create_list(:outdoor_alert, evaluator.outdoor_alert_count, user: user)
       end
     end
+
+    factory :user_with_indoor_alert do
+      transient do
+        indoor_alert_count 1
+      end
+
+      after(:create) do |user, evaluator|
+        create_list(:indoor_alert, evaluator.indoor_alert_count, user: user)
+      end
+    end
   end
 
   factory :outdoor_alert do
@@ -37,6 +47,13 @@ FactoryGirl.define do
       low 1
       poor 1
     end
+  end
+
+  factory :indoor_alert do
+    user
+    phone
+    name "Furnace"
+    date "3/7/2016"
   end
 
   factory :location do

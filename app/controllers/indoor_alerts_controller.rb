@@ -1,4 +1,5 @@
 class IndoorAlertsController < ApplicationController
+  before_action :find_indoor_alert_objects, only: [:edit]
   rescue_from Twilio::REST::RequestError, with: :twilio_bad_request
 
   def new
@@ -19,7 +20,27 @@ class IndoorAlertsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @phone, @indoor_alert = IndoorAlertCreator.update(params[:id],phone_params,
+                                                     indoor_alert_params,
+                                                     current_user)
+  if @phone.errors.messages.empty? & @indoor_alert.save
+      flash[:success] = "Indoor Air Filter reminder updated!"
+      redirect_to alerts_path
+    else
+      render :edit
+    end
+  end
+
   private
+
+  def find_indoor_alert_objects
+    @indoor_alert = IndoorAlert.find(params[:id])
+    @phone = @indoor_alert.phone
+  end
 
   def indoor_alert_params
     params.require(:indoor_alert).permit(:name, :date)
