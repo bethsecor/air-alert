@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe IndoorAlert, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "can covert the string date to a datetime object" do
+    indoor_alert = create(:indoor_alert)
+
+    expect(indoor_alert.to_datetime).to eq DateTime.new(2016, 3, 7)
+  end
 end

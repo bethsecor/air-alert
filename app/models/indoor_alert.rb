@@ -17,4 +17,9 @@ class IndoorAlert < ActiveRecord::Base
     )
     message.body
   end
+
+  def to_datetime
+    month, day, year = self.date.split("/").map(&:to_i)
+    DateTime.new(year, month, day)
+  end
 end
