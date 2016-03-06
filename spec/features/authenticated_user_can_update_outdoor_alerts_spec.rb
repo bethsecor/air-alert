@@ -19,7 +19,7 @@ RSpec.feature "AuthenticatedUserCanUpdateOutdoorAlerts", type: :feature do
 
     expect(current_path).to eq edit_outdoor_alert_path(id: alert.id)
 
-    fill_in "Address", with: "Los Angeles"
+    fill_in "Address", with: "Denver, CO"
     fill_in "Number", with: ENV['VALID_PHONE']
     choose "Health"
     check "Low Air Quality"
@@ -32,6 +32,6 @@ RSpec.feature "AuthenticatedUserCanUpdateOutdoorAlerts", type: :feature do
 
     alert = OutdoorAlert.last.reload
 
-    expect(alert.location.address).to eq "Los Angeles"
+    expect(alert.location.address).to eq "Denver, CO"
   end
 end

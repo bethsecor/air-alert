@@ -14,14 +14,30 @@ class OutdoorAlert < ActiveRecord::Base
   validates :excellent, presence: true
 
   def initial_alert
-    @twilio_number = ENV['TWILIO_NUMBER']
     @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
     welcome = "Welcome to Air Alerts! You will receive air quality updates for #{self.location.address}."
     message = @client.account.messages.create(
-      :from => @twilio_number,
+      :from => ENV['TWILIO_NUMBER'],
       :to => "+#{self.phone.number}",
       :body => welcome
     )
-    # puts message.to
+    message.body
+  end
+
+  def self.specific(quality)
+    self.where("outdoor_alerts.#{quality} = ?", 1)
+  end
+
+  def breezometer_reason
+    case self.reason
+    when "children"
+      :children
+    when "health"
+      :health
+    when "athlete"
+      :sport
+    else
+      :outside
+    end
   end
 end

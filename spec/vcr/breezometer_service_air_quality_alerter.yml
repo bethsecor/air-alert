@@ -1,0 +1,358 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Boston,%2BMA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:28 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1410'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "United States", "breezometer_aqi": 69, "breezometer_color":
+        "#8AD130", "breezometer_description": "Fair Air Quality", "country_aqi": 37,
+        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+        "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "You should supervise your children in the coming hours and monitor
+        changes in air quality", "sport": "You can go on a run - just keep your nose
+        open for any changes!", "health": "Exposure to air hazards is dangerous for
+        people with health sensitivities, so it is important to monitor air quality
+        at this time", "inside": "The amount of pollutants in the air is noticeable,
+        but still there is no danger to health - It is recommended to watch for changes",
+        "outside": "It''s still OK to go out and enjoy a stroll, just pay attention
+        for changes in air quality"}, "dominant_pollutant_canonical_name": "pm2.5",
+        "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:28 GMT
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Air+Alert%3A+Air+quality+for+Boston%2C+MA+is+69+%28Fair+Air+Quality%29.+It%27s+still+OK+to+go+out+and+enjoy+a+stroll%2C+just+pay+attention+for+changes+in+air+quality
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:29 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.071'
+      Twilio-Request-Id:
+      - RQ384d040e35534aabadfed68caae51d4d
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '912'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM01ff58f9a76949228cda65b0f6a7c61c", "date_created": "Sun,
+        06 Mar 2016 19:26:29 +0000", "date_updated": "Sun, 06 Mar 2016 19:26:29 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Air Alert: Air quality for Boston,
+        MA is 69 (Fair Air Quality). It''s still OK to go out and enjoy a stroll,
+        just pay attention for changes in air quality", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM01ff58f9a76949228cda65b0f6a7c61c.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM01ff58f9a76949228cda65b0f6a7c61c/Media.json"}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:29 GMT
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Boston,%2BMA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:30 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1433'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "United States", "breezometer_aqi": 69, "breezometer_color":
+        "#8AD130", "breezometer_description": "Fair Air Quality", "country_aqi": 37,
+        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+        "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "No reason to panic, but pay attention to changes in air quality
+        and any signals of breathing problems in your children", "sport": "You can
+        exercise outdoors - but make sure to stay alert to our notifications", "health":
+        "There is no real danger for people with health sensitivities. Just keep an
+        eye out for changes in air quality for the next few hours", "inside": "The
+        amount of pollutants in the air is noticeable, but still there is no danger
+        to health - It is recommended to watch for changes", "outside": "You can go
+        out, but please pay attention for changes in air quality"}, "dominant_pollutant_canonical_name":
+        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:30 GMT
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Air+Alert%3A+Air+quality+for+Boston%2C+MA+is+69+%28Fair+Air+Quality%29.+You+can+go+out%2C+but+please+pay+attention+for+changes+in+air+quality
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:30 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.043'
+      Twilio-Request-Id:
+      - RQ6fe678195abe40909e48f51904c3b898
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '890'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMd8ee94c59e9045a5816f07f058a2dab8", "date_created": "Sun,
+        06 Mar 2016 19:26:30 +0000", "date_updated": "Sun, 06 Mar 2016 19:26:30 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Air Alert: Air quality for Boston,
+        MA is 69 (Fair Air Quality). You can go out, but please pay attention for
+        changes in air quality", "status": "queued", "num_segments": "1", "num_media":
+        "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null,
+        "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMd8ee94c59e9045a5816f07f058a2dab8.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMd8ee94c59e9045a5816f07f058a2dab8/Media.json"}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:30 GMT
+- request:
+    method: get
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Boston,%2BMA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:31 GMT
+      Server:
+      - Google Frontend
+      Content-Length:
+      - '1486'
+    body:
+      encoding: UTF-8
+      string: '{"country_name": "United States", "breezometer_aqi": 69, "breezometer_color":
+        "#8AD130", "breezometer_description": "Fair Air Quality", "country_aqi": 37,
+        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+        "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
+        {"children": "No reason to panic, but pay attention to changes in air quality
+        and any signals of breathing problems in your children", "sport": "Since we
+        inhale more air during sports, you should keep track of changes in air quality
+        for the next few hours", "health": "Exposure to air hazards is dangerous for
+        people with health sensitivities, so it is important to monitor air quality
+        at this time", "inside": "The amount of pollutants in the air is noticeable,
+        but still there is no danger to health - It is recommended to watch for changes",
+        "outside": "It''s still OK to go out and enjoy a stroll, just pay attention
+        for changes in air quality"}, "dominant_pollutant_canonical_name": "pm2.5",
+        "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
+        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
+        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
+        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
+        sources are fuel burning processes in industry, transportation and indoor
+        heating."}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:31 GMT
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Air+Alert%3A+Air+quality+for+Boston%2C+MA+is+69+%28Fair+Air+Quality%29.+It%27s+still+OK+to+go+out+and+enjoy+a+stroll%2C+just+pay+attention+for+changes+in+air+quality
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Mar 2016 19:26:32 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.038'
+      Twilio-Request-Id:
+      - RQeb81033dfa43403785237b2c954d04f6
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '912'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMd3eca5090439435a8482c2b85cb13802", "date_created": "Sun,
+        06 Mar 2016 19:26:31 +0000", "date_updated": "Sun, 06 Mar 2016 19:26:31 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Air Alert: Air quality for Boston,
+        MA is 69 (Fair Air Quality). It''s still OK to go out and enjoy a stroll,
+        just pay attention for changes in air quality", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMd3eca5090439435a8482c2b85cb13802.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMd3eca5090439435a8482c2b85cb13802/Media.json"}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 19:26:32 GMT
+recorded_with: VCR 3.0.1

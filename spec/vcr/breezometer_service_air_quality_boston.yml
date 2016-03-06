@@ -25,22 +25,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 03 Mar 2016 21:48:14 GMT
+      - Sun, 06 Mar 2016 02:37:48 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1257'
+      - '1432'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 80, "breezometer_color":
-        "#58BE35", "breezometer_description": "Excellent Air Quality", "country_aqi":
-        24, "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
+      string: '{"country_name": "United States", "breezometer_aqi": 76, "breezometer_color":
+        "#69C534", "breezometer_description": "Fair Air Quality", "country_aqi": 28,
+        "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
         "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
-        {"children": "The air is ideal for outdoor activities with infants and children",
-        "sport": "This air quality is perfect for engaging in outdoor physical activities",
-        "health": "This air quality is excellent for people with respiratory sensitivities",
-        "inside": "Ventilate the house with the great air outside", "outside": "Hooray!
-        The air quality outside is awesome!"}, "dominant_pollutant_canonical_name":
+        {"children": "Have fun with the kids outside, but stay alert for our notifications",
+        "sport": "You can go on a run - just keep your nose open for any changes!",
+        "health": "Exposure to air hazards is dangerous for people with health sensitivities,
+        so it is important to monitor air quality at this time", "inside": "The amount
+        of pollutants in the air is noticeable, but still there is no danger to health
+        - It is recommended to watch for changes", "outside": "It''s still OK out
+        there. Just stay alert for notifications about change in air quality"}, "dominant_pollutant_canonical_name":
         "o3", "dominant_pollutant_description": "Ozone", "dominant_pollutant_text":
         {"main": "The dominant pollutant is ozone (O\u2083).", "effects": "Ozone can
         irritate the airways causing coughing, a burning sensation, wheezing and shortness
@@ -49,5 +51,5 @@ http_interactions:
         "causes": "Ozone is created in a chemical reaction between atmospheric oxygen,
         nitrogen oxides, organic compounds and sunlight."}}'
     http_version: 
-  recorded_at: Thu, 03 Mar 2016 21:48:14 GMT
+  recorded_at: Sun, 06 Mar 2016 02:37:48 GMT
 recorded_with: VCR 3.0.1

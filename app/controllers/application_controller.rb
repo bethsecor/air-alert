@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  rescue_from JSON::ParserError, with: :resource_not_found
   layout :layout_by_resource
   helper_method :current_user
 
@@ -21,5 +22,10 @@ class ApplicationController < ActionController::Base
     else
       "application"
     end
+  end
+
+  def resource_not_found
+    flash[:alert] = 'Oops! Something went wrong!'
+    redirect_to airquality_path
   end
 end

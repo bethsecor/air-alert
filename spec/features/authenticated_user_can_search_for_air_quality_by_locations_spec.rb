@@ -20,9 +20,9 @@ RSpec.feature "AuthenticatedUserCanSearchForAirQualityByLocations", type: :featu
         expect(current_path).to eq(airquality_path)
         within('.air-quality-box') do
           expect(page).to have_content("Air Quality for Beijing")
-          expect(page).to have_content("8")
-          expect(page).to have_content("Poor Air Quality")
-          expect(page).to have_content("Dominant Pollutant: Fine particulate matter (<2.5µm)")
+          expect(page).to have_content("30")
+          expect(page).to have_content("Low Air Quality")
+          expect(page).to have_content("Dominant Pollutant: Inhalable particulate matter (<10µm)")
         end
       end
     end

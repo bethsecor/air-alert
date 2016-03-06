@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Denver,%2BCO
+    uri: http://api.breezometer.com/baqi?key=d30efaaa5b744a0b820fd3cd81c35c28&location=Boston,%2BMA
     body:
       encoding: US-ASCII
       string: ''
@@ -25,25 +25,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 06 Mar 2016 02:37:50 GMT
+      - Sun, 06 Mar 2016 19:45:53 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1336'
+      - '1324'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 72, "breezometer_color":
-        "#7BCB33", "breezometer_description": "Fair Air Quality", "country_aqi": 33,
+      string: '{"country_name": "United States", "breezometer_aqi": 69, "breezometer_color":
+        "#8AD130", "breezometer_description": "Fair Air Quality", "country_aqi": 37,
         "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
         "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
         {"children": "Have fun with the kids outside, but stay alert for our notifications",
-        "sport": "You can go on a run - just keep your nose open for any changes!",
-        "health": "There is no real danger for people with health sensitivities. Just
-        keep an eye out for changes in air quality for the next few hours", "inside":
-        "The air quality is still good - we''ll keep you updated if things get worse",
-        "outside": "It''s still OK to go out and enjoy a stroll, just pay attention
-        for changes in air quality"}, "dominant_pollutant_canonical_name": "pm2.5",
-        "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
+        "sport": "You can exercise outdoors - but make sure to stay alert to our notifications",
+        "health": "Exposure to air hazards is dangerous for people with health sensitivities,
+        so it is important to monitor air quality at this time", "inside": "The air
+        quality is still good - we''ll keep you updated if things get worse", "outside":
+        "You can go out, but please pay attention for changes in air quality"}, "dominant_pollutant_canonical_name":
+        "pm2.5", "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
         "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
         matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
         systemic inflammation in the respiratory system & heart, thus cause cardiovascular
@@ -51,5 +50,5 @@ http_interactions:
         sources are fuel burning processes in industry, transportation and indoor
         heating."}}'
     http_version: 
-  recorded_at: Sun, 06 Mar 2016 02:37:50 GMT
+  recorded_at: Sun, 06 Mar 2016 19:45:53 GMT
 recorded_with: VCR 3.0.1
