@@ -18,7 +18,7 @@ RSpec.feature "AuthenticatedUserCanSeeAirQualityForTwitterLocations", type: :fea
         expect(page).to have_content("Air Quality for #{location}")
         expect(page).to have_content("72")
         expect(page).to have_content("Fair Air Quality")
-        expect(page).to have_content("Dominant Pollutant: Fine particulate matter (<2.5µm)")
+        expect(page).to have_content("Dominant Pollutant: Ozone")
       end
     end
   end
