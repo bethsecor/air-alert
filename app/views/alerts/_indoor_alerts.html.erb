@@ -1,0 +1,22 @@
+<table class="highlight">
+  <thead>
+    <tr>
+        <th data-field="name">Name</th>
+        <th data-field="phone">Phone</th>
+        <th data-field="date">Reminder on:</th>
+        <th data-field="actions", class="center"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @indoor_alerts.each do |in_alert| %>
+    <tr id="indoor-air-alert-<%=in_alert.id%>">
+      <td><%= in_alert.name %></td>
+      <td><%= in_alert.phone.number %></td>
+      <td><%= in_alert.date %></td>
+      <td><%= link_to "Delete", indoor_alert_path(id: in_alert.id), method: :delete, class: "btn-flat center" %>
+          <%= link_to "Update", edit_indoor_alert_path(id: in_alert.id), class: "btn-flat center" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

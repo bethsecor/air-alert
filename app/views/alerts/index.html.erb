@@ -1,39 +1,15 @@
 <div class="container">
   <h4>Outdoor Air Quality Alerts</h4>
   <div class="outdoor-alerts">
-    <table class="highlight">
-        <thead>
-          <tr>
-              <th data-field="location">Location</th>
-              <th data-field="phone">Phone</th>
-              <th data-field="reason">Reason</th>
-              <th data-field="poor", class="center">Poor</th>
-              <th data-field="low", class="center">Low</th>
-              <th data-field="moderate", class="center">Moderate</th>
-              <th data-field="fair", class="center">Fair</th>
-              <th data-field="excellent", class="center">Excellent</th>
-              <th data-field="actions", class="center"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @outdoor_alerts.each do |out_alert| %>
-          <tr id="outdoor-air-alert-<%=out_alert.id%>">
-            <td><%= out_alert.location.address %></td>
-            <td><%= out_alert.phone.number %></td>
-            <td><%= out_alert.reason.capitalize %></td>
-            <td id="poor-<%=out_alert.id%>", class="center"><%= "x" if out_alert.poor == 1 %></td>
-            <td id="low-<%=out_alert.id%>", class="center"><%= "x" if out_alert.low == 1 %></td>
-            <td id="moderate-<%=out_alert.id%>", class="center"><%= "x" if out_alert.moderate == 1 %></td>
-            <td id="fair-<%=out_alert.id%>", class="center"><%= "x" if out_alert.fair == 1 %></td>
-            <td id="excellent-<%=out_alert.id%>", class="center"><%= "x" if out_alert.excellent == 1 %></td>
-            <td><%= link_to "Delete", outdoor_alert_path(id: out_alert.id), method: :delete, class: "btn-flat center" %>
-                <%= link_to "Update", edit_outdoor_alert_path(id: out_alert.id), class: "btn-flat center" %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <hr>
-      <%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1 right" %>
+    <%= render partial: 'outdoor_alerts' %>
+    <hr>
+    <%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1 right" %>
+  </div>
+  <br><br><br>
+  <div class="indoor-alerts">
+    <h4>Air Filter Replacement Reminders</h4>
+    <%= render partial: 'indoor_alerts' %>
+    <hr>
+    <%= link_to "Create Air Filter Replacement Reminder", new_indoor_alert_path, class: "btn cyan lighten-1 right" %>
   </div>
 </div>

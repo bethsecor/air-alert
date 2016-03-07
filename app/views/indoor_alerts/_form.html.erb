@@ -1,0 +1,17 @@
+<%= form_for @indoor_alert do |f| %>
+  <%= render partial: 'shared/errors', locals: {target: @indoor_alert} %>
+
+  <%= f.text_field :name %>
+  <%= f.label :name, "Air Filter Name" %>
+  <br>
+  <%= f.text_field :date, :placeholder => "mm/dd/yyyy" %>
+  <%= f.label :date, "Remind me on:" %>
+  <br>
+  <%= fields_for @phone do |n| %>
+    <%= render partial: 'shared/errors', locals: {target: @phone} %>
+    <%= n.telephone_field :number %>
+    <%= n.label :number, "Phone Number" %>
+  <% end %>
+  <br><br><br>
+  <%= f.submit "Remind Me!", class: "btn cyan lighten-1" %>
+<% end %>

@@ -1,5 +1,6 @@
 class Phone < ActiveRecord::Base
   has_many :outdoor_alerts
+  has_many :indoor_alerts
   before_validation :sanitize_phone
 
   validates :number, presence: true, length: { in: 10..11 }
@@ -11,7 +12,7 @@ class Phone < ActiveRecord::Base
   end
 
   # This validation does not work with Twilio Test Credentials
-  
+
   # def proper_phone_number
   #   unless self.valid_number?
   #     errors.add(:phone, "number is not a valid, please try another number.")

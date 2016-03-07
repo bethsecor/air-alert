@@ -16,3 +16,4 @@
 /config/application.yml
 
 /coverage
+/app/assets/images/.DS_Store
