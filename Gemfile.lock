@@ -59,6 +59,7 @@ GEM
     concurrent-ruby (1.0.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    dalli (2.7.6)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
@@ -91,6 +92,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    memcachier (0.0.2)
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (2.99.1)
@@ -225,6 +227,7 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.1.0)
+  dalli
   database_cleaner
   factory_girl
   faraday
@@ -232,6 +235,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  memcachier
   mocha
   omniauth-twitter
   pg (~> 0.15)
