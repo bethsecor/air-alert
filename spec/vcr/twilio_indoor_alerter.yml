@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Air+Alert%3A+Time+to+change+the+filter+for+Furnace%21
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Mar 2016 00:28:44 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.074'
+      Twilio-Request-Id:
+      - RQbdb0c3688c46445d9485b8387cd6f9e1
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '808'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM31d0d17b085940a59d0454d94432d04c", "date_created": "Mon,
+        07 Mar 2016 00:28:44 +0000", "date_updated": "Mon, 07 Mar 2016 00:28:44 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Air Alert: Time to change the filter
+        for Furnace!", "status": "queued", "num_segments": "1", "num_media": "0",
+        "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit":
+        "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM31d0d17b085940a59d0454d94432d04c.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM31d0d17b085940a59d0454d94432d04c/Media.json"}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 00:00:00 GMT
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Air+Alert%3A+Time+to+change+the+filter+for+Furnace%21
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 07 Mar 2016 00:28:44 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.054'
+      Twilio-Request-Id:
+      - RQ2070526873524127a8440dbdbc49f7fc
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '808'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SMc03db5ed8af94541883dd5ce414c437e", "date_created": "Mon,
+        07 Mar 2016 00:28:44 +0000", "date_updated": "Mon, 07 Mar 2016 00:28:44 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Air Alert: Time to change the filter
+        for Furnace!", "status": "queued", "num_segments": "1", "num_media": "0",
+        "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit":
+        "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMc03db5ed8af94541883dd5ce414c437e.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SMc03db5ed8af94541883dd5ce414c437e/Media.json"}}'
+    http_version: 
+  recorded_at: Sun, 06 Mar 2016 00:00:00 GMT
+recorded_with: VCR 3.0.1

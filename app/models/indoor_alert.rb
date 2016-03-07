@@ -2,6 +2,8 @@ class IndoorAlert < ActiveRecord::Base
   belongs_to :phone
   belongs_to :user
 
+  before_save :to_date
+
   validates :phone_id, presence: {:message => "number you entered needs checking!"}
   validates :name, presence: true
   validates :date, presence: true
@@ -18,8 +20,8 @@ class IndoorAlert < ActiveRecord::Base
     message.body
   end
 
-  def to_datetime
+  def to_date
     month, day, year = self.date.split("/").map(&:to_i)
-    DateTime.new(year, month, day)
+    self.reminder = Date.new(year, month, day)
   end
 end
