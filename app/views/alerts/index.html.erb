@@ -1,15 +1,13 @@
 <div class="container">
-  <h4>Outdoor Air Quality Alerts</h4>
   <div class="outdoor-alerts">
-    <%= render partial: 'outdoor_alerts' %>
-    <hr>
+    <h4>Outdoor Air Quality Alerts</h4>
+    <%= render partial: 'outdoor_alerts' unless @outdoor_alerts.empty? %>
     <%= link_to "Create Outdoor Air Quality Alert", new_outdoor_alert_path, class: "btn cyan lighten-1 right" %>
   </div>
   <br><br><br>
   <div class="indoor-alerts">
     <h4>Air Filter Replacement Reminders</h4>
-    <%= render partial: 'indoor_alerts' %>
-    <hr>
+    <%= render partial: 'indoor_alerts' unless @indoor_alerts.empty? %>
     <%= link_to "Create Air Filter Replacement Reminder", new_indoor_alert_path, class: "btn cyan lighten-1 right" %>
   </div>
 </div>

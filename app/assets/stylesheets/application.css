@@ -37,28 +37,46 @@
    font-size: 1em;
  }
 
+ a {
+   color: #673ab7;
+ }
+
+ .container {
+   width: 85%;
+   padding-bottom: 20px;
+ }
+
  .flash {
    text-align: center;
    color: #303f9f;
  }
 
- .air-quality-box {
+ .air-quality-box, .outdoor-alerts, .indoor-alerts, .legislation, .bill {
    background-color: white;
    border-radius: 25px;
    border-color: #26c6da;
    border-style: solid;
-   padding: 10px
+   padding: 10px;
  }
 
  .air-quality {
    display:inline-block;
-   padding-left: 100px;
+   padding-left: 40px;
+   max-width: 500px;
  }
 
- .recommendations {
-   max-width: 400px;
+ .air-quality h1 {
+   font-size: 8em;
+ }
+
+ .map {
    display:inline-block;
-   padding-left: 100px;
+   padding-left: 30px;
+ }
+
+
+ .recommendations {
+   max-width: 360px;
  }
 
  .pollutant {
@@ -67,7 +85,7 @@
 
 .air-quality-search {
   width: 30%;
-  padding-top:  30px;
+  padding-top:  20px;
   padding-bottom: 20px;
 }
 

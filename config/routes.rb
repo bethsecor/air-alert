@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :indoor_alerts, only: [:new, :create, :destroy, :edit, :update]
 
   get '/bills/:bill_id', to: 'bills#show'
+
+  resources :tweets, only: [:create]
 end

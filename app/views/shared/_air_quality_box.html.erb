@@ -5,20 +5,30 @@
     <h5 class="center">Air Quality for <%= current_user.location %></h5>
   <% end %>
   <hr>
-  <div class="air-quality center" style="color:<%= @air_quality.breezometer_color %>">
-    <div class="air-quality-number">
+  <div class="air-quality center">
+    <div class="air-quality-number" style="color:<%= @air_quality.breezometer_color %>">
       <h1 ><%= @air_quality.breezometer_aqi %></h1>
     </div>
 
-    <div class="air-quality-text">
+    <div class="air-quality-text" style="color:<%= @air_quality.breezometer_color %>">
       <h4><%= @air_quality.breezometer_description %></h4>
+    </div>
+    <hr>
+    <div class="recommendations center">
+      <h5>Recommendations</h5>
+      <p>
+        <%= @air_quality.random_recommendations[:outside] %>.
+      </p>
     </div>
   </div>
 
-  <div class="recommendations">
-    <h5>Recommendations</h5><br>
-    <%= @air_quality.random_recommendations[:outside] %>
-  </div>
+    <div class="map">
+      <% if params[:air_quality_search] %>
+        <%= render partial: 'shared/map', locals: {location: params[:air_quality_search][:address]} %>
+      <% else %>
+        <%= render partial: 'shared/map', locals: {location: current_user.location} %>
+      <% end %>
+    </div>
 
   <br>
   <hr>
@@ -28,6 +38,14 @@
     <p>
       <%= @air_quality.dominant_pollutant_text[:effects] %>
       <%= @air_quality.dominant_pollutant_text[:causes] %>
+      <br>
+      <% if params[:air_quality_search] %>
+        <%= link_to "Tweet", tweets_path(tweet: {message: @message}),
+           method: :post, class: "btn cyan lighten-1 right" %>
+      <% else %>
+        <%= link_to "Tweet", tweets_path(tweet: {message: @message}),
+           method: :post, class: "btn cyan lighten-1 right" %>
+      <% end %>
     </p>
   </div>
 </div>
