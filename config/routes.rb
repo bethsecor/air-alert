@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   get '/airquality', to: 'air_quality#show'
   get '/alerts', to: 'alerts#index'
+  get '/legislation', to: 'legislation#show'
 
   resources :outdoor_alerts, only: [:new, :create, :destroy, :edit, :update]
   resources :indoor_alerts, only: [:new, :create, :destroy, :edit, :update]
+
+  get '/bills/:bill_id', to: 'bills#show'
 end

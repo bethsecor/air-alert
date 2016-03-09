@@ -1,0 +1,28 @@
+<% unless @bills.nil? %>
+  <% unless @bills.empty? %>
+  <br><br>
+  <h5>Recent <%= full_state(params[:state]) %> Legislation:</h5>
+  <table>
+    <thead>
+      <tr>
+          <th data-field="bill">Bill</th>
+          <th data-field="title">Title</th>
+          <th data-field="session">Session</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.bill_id %></td>
+        <td><%= link_to bill.title, "/bills/#{bill.id}" %></td>
+        <td><%= bill.session %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <br><br>
+    <%= "No results found for #{full_state(params[:state])}." %>
+  <% end %>
+<% end %>

@@ -25,31 +25,32 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 06 Mar 2016 02:37:50 GMT
+      - Wed, 09 Mar 2016 03:49:01 GMT
       Server:
       - Google Frontend
       Content-Length:
-      - '1336'
+      - '1517'
     body:
       encoding: UTF-8
-      string: '{"country_name": "United States", "breezometer_aqi": 72, "breezometer_color":
-        "#7BCB33", "breezometer_description": "Fair Air Quality", "country_aqi": 33,
+      string: '{"country_name": "United States", "breezometer_aqi": 77, "breezometer_color":
+        "#65C334", "breezometer_description": "Fair Air Quality", "country_aqi": 27,
         "country_aqi_prefix": "", "country_color": "#00E400", "country_description":
         "Good air quality", "data_valid": true, "key_valid": true, "random_recommendations":
         {"children": "Have fun with the kids outside, but stay alert for our notifications",
-        "sport": "You can go on a run - just keep your nose open for any changes!",
-        "health": "There is no real danger for people with health sensitivities. Just
-        keep an eye out for changes in air quality for the next few hours", "inside":
-        "The air quality is still good - we''ll keep you updated if things get worse",
-        "outside": "It''s still OK to go out and enjoy a stroll, just pay attention
-        for changes in air quality"}, "dominant_pollutant_canonical_name": "pm2.5",
-        "dominant_pollutant_description": "Fine particulate matter (<2.5\u00b5m)",
-        "dominant_pollutant_text": {"main": "The dominant pollutant is fine particulate
-        matter (PM2.5).", "effects": "Particles enter the lungs and cause local and
-        systemic inflammation in the respiratory system & heart, thus cause cardiovascular
-        and respiratory diseases such as asthma and bronchitis.", "causes": "Main
-        sources are fuel burning processes in industry, transportation and indoor
-        heating."}}'
+        "sport": "Since we inhale more air during sports, you should keep track of
+        changes in air quality for the next few hours", "health": "There is no real
+        danger for people with health sensitivities. Just keep an eye out for changes
+        in air quality for the next few hours", "inside": "The amount of pollutants
+        in the air is noticeable, but still there is no danger to health - It is recommended
+        to watch for changes", "outside": "It''s still OK out there. Just stay alert
+        for notifications about change in air quality"}, "dominant_pollutant_canonical_name":
+        "o3", "dominant_pollutant_description": "Ozone", "dominant_pollutant_text":
+        {"main": "The dominant pollutant is ozone (O\u2083).", "effects": "Ozone can
+        irritate the airways causing coughing, a burning sensation, wheezing and shortness
+        of breath. Children, people with respiratory or lung and heart diseases, elderly
+        and those who exercise outdoors are particularly vulnerable to ozone exposure.",
+        "causes": "Ozone is created in a chemical reaction between atmospheric oxygen,
+        nitrogen oxides, organic compounds and sunlight."}, "datetime": "2016-03-09T02:49:46"}'
     http_version: 
-  recorded_at: Sun, 06 Mar 2016 02:37:50 GMT
+  recorded_at: Wed, 09 Mar 2016 03:49:02 GMT
 recorded_with: VCR 3.0.1

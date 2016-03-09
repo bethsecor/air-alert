@@ -1,0 +1,12 @@
+<%= form_for :legislation, url: legislation_path, method: :get do |f| %>
+  <div class="input-field col s12">
+    <%= select_tag :state, options_for_select(us_states) %>
+  </div>
+  <%= f.submit "Find those bills", class: "btn cyan lighten-1" %>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+     $('select').material_select();
+  });
+</script>

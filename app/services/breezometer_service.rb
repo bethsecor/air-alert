@@ -9,7 +9,7 @@ class BreezometerService
   end
 
   def air_quality(location)
-    Rails.cache.fetch("breezometer_air_#{location}", :expires_in => 15.minutes) do
+    Rails.cache.fetch("breezometer_air_#{location}", expires_in: 15.minutes) do
       parse(connection.get("", {location: location, key: ENV["BREEZOMETER_KEY"]}))
     end
   end
