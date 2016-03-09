@@ -54,4 +54,8 @@ module LegislationHelper
       ['Wyoming', 'WY']
     ]
   end
+
+  def full_state(abbreviation)
+    us_states.select { |full, abbr| abbr == abbreviation.upcase }[0][0]
+  end
 end

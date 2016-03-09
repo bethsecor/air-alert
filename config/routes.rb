@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   resources :outdoor_alerts, only: [:new, :create, :destroy, :edit, :update]
   resources :indoor_alerts, only: [:new, :create, :destroy, :edit, :update]
+
+  resources :bills, only: [:show]
 end

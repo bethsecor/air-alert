@@ -1,15 +1,12 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the LegislationHelper. For example:
-#
-# describe LegislationHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe LegislationHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "returns Alabama as first state" do
+    expect(us_states.first.first).to eq "Alabama"
+    expect(us_states.last.first).to eq "Wyoming"
+  end
+
+  it "returns California for ca abbreviation" do
+    expect(full_state("ca")).to eq "California"
+  end
 end

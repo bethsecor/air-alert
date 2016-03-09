@@ -18,6 +18,9 @@ RSpec.feature "AuthenticatedUserCanSeeCurrentAirQualityLegislations", type: :fea
       click_on "Find those bills"
 
       expect(page).to have_content("California Legislation:")
+      expect(page).to have_content("AB 21")
+      expect(page).to have_content("20152016")
+      expect(page).to have_content("Medical marijuana: cultivation licenses.")
     end
   end
 end

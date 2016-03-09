@@ -6,11 +6,13 @@ class SunlightService
   end
 
   def bills(state)
-    parse(connection.get("bills/", {q: "air+quality",
-                                    state: state.downcase,
-                                    status: "signed",
-                                    last_action_since: "2015-01-01",
-                                    apikey: ENV["SUNLIGHT_KEY"]}))
+    Rails.cache.fetch("sunlight_all_bills_#{state}", expires_in: 24.hours) do
+      parse(connection.get("bills/", {q: "air+quality",
+                                      state: state.downcase,
+                                      status: "signed",
+                                      last_action_since: "2015-01-01",
+                                      apikey: ENV["SUNLIGHT_KEY"]}))
+    end
   end
 
   private
