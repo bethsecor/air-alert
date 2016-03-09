@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://openstates.org/api/v1/bills/?apikey=e179df0418984bf9b21826e12f267cc1&last_action_since=2015-01-01&q=air%2Bquality&state=ca&status=signed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.1 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '6694'
+      Date:
+      - Mon, 07 Mar 2016 22:34:05 GMT
+      X-Varnish:
+      - '1648804525'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"title": "Medical marijuana: cultivation licenses.", "created_at":
+        "2015-01-05 16:30:29", "updated_at": "2016-02-08 08:13:22", "id": "CAB00014775",
+        "chamber": "lower", "state": "ca", "session": "20152016", "type": ["bill",
+        "urgency"], "subjects": [], "bill_id": "AB 21"}, {"title": "Greenhouse Gas
+        Reduction Fund: Transit and Intercity Rail Capital Program.", "created_at":
+        "2015-01-05 16:30:30", "updated_at": "2015-10-10 07:16:18", "id": "CAB00014777",
+        "chamber": "upper", "state": "ca", "session": "20152016", "type": ["bill",
+        "appropriation", "fiscal committee"], "subjects": [], "bill_id": "SB 9"},
+        {"title": "Organic waste: composting.", "created_at": "2015-02-28 00:13:43",
+        "updated_at": "2015-10-19 07:14:51", "id": "CAB00016277", "chamber": "lower",
+        "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee"],
+        "subjects": [], "bill_id": "AB 1045"}, {"title": "California Communities Environmental
+        Health Screening.", "created_at": "2015-02-28 00:14:45", "updated_at": "2015-10-10
+        07:16:05", "id": "CAB00016370", "chamber": "lower", "state": "ca", "session":
+        "20152016", "type": ["bill", "fiscal committee"], "subjects": [], "bill_id":
+        "AB 1059"}, {"title": "Greenway Development and Sustainment Act.", "created_at":
+        "2015-03-01 00:18:32", "updated_at": "2015-10-19 07:14:54", "id": "CAB00017103",
+        "chamber": "lower", "state": "ca", "session": "20152016", "type": ["bill",
+        "fiscal committee", "local program"], "subjects": [], "bill_id": "AB 1251"},
+        {"title": "Air resources.", "created_at": "2015-03-01 00:15:58", "updated_at":
+        "2015-12-14 08:15:55", "id": "CAB00016818", "chamber": "lower", "state": "ca",
+        "session": "20152016", "type": ["bill", "fiscal committee"], "subjects": [],
+        "bill_id": "AB 1288"}, {"title": "Climate adaptation.", "created_at": "2015-03-01
+        00:14:03", "updated_at": "2015-10-12 07:14:24", "id": "CAB00016609", "chamber":
+        "lower", "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee"],
+        "subjects": [], "bill_id": "AB 1482"}, {"title": "Methane emissions.", "created_at":
+        "2015-03-01 00:15:47", "updated_at": "2015-10-19 07:15:01", "id": "CAB00016806",
+        "chamber": "lower", "state": "ca", "session": "20152016", "type": ["bill",
+        "fiscal committee"], "subjects": [], "bill_id": "AB 1496"}, {"title": "Retail
+        food safety: fishermen''s markets.", "created_at": "2015-02-05 00:11:03",
+        "updated_at": "2015-10-19 07:14:16", "id": "CAB00015169", "chamber": "lower",
+        "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee",
+        "local program"], "subjects": [], "bill_id": "AB 226"}, {"title": "Climate
+        change adaptation.", "created_at": "2015-02-20 00:10:14", "updated_at": "2015-12-14
+        08:15:31", "id": "CAB00015416", "chamber": "upper", "state": "ca", "session":
+        "20152016", "type": ["bill", "fiscal committee"], "subjects": [], "bill_id":
+        "SB 246"}, {"title": "Carl Moyer Memorial Air Quality Standards Attainment
+        Program: fees.", "created_at": "2015-02-28 00:13:42", "updated_at": "2015-10-10
+        07:15:25", "id": "CAB00016276", "chamber": "upper", "state": "ca", "session":
+        "20152016", "type": ["bill", "fiscal committee"], "subjects": [], "bill_id":
+        "SB 513"}, {"title": "Hazardous waste.", "created_at": "2015-03-01 00:16:42",
+        "updated_at": "2015-10-12 07:14:12", "id": "CAB00016900", "chamber": "upper",
+        "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee"],
+        "subjects": ["Environmental"], "bill_id": "SB 673"}, {"title": "Toll bridges:
+        pedestrians and bicycles.", "created_at": "2015-01-05 16:30:55", "updated_at":
+        "2016-02-17 08:23:57", "id": "CAB00014824", "chamber": "lower", "state": "ca",
+        "session": "20152016", "type": ["bill", "fiscal committee"], "subjects": [],
+        "bill_id": "AB 40"}, {"title": "Clean Energy and Pollution Reduction Act of
+        2015.", "created_at": "2015-02-26 00:12:17", "updated_at": "2015-12-14 08:14:52",
+        "id": "CAB00015812", "chamber": "upper", "state": "ca", "session": "20152016",
+        "type": ["bill", "fiscal committee", "local program"], "subjects": [], "bill_id":
+        "SB 350"}, {"title": "Transportation: omnibus bill.", "created_at": "2015-02-28
+        00:15:25", "updated_at": "2015-10-09 07:14:45", "id": "CAB00016445", "chamber":
+        "upper", "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee",
+        "local program"], "subjects": [], "bill_id": "SB 491"}, {"title": "Hazardous
+        materials.", "created_at": "2015-03-01 00:17:30", "updated_at": "2015-10-12
+        07:14:36", "id": "CAB00016991", "chamber": "upper", "state": "ca", "session":
+        "20152016", "type": ["bill", "fiscal committee", "local program"], "subjects":
+        [], "bill_id": "SB 612"}, {"title": "Housing.", "created_at": "2015-03-10
+        23:14:59", "updated_at": "2015-10-07 07:16:42", "id": "CAB00017152", "chamber":
+        "lower", "state": "ca", "session": "20152016", "type": ["bill", "fiscal committee"],
+        "subjects": ["Housing and Property"], "bill_id": "AB 1516"}, {"title": "Maintenance
+        of the codes.", "created_at": "2015-02-27 00:12:55", "updated_at": "2015-09-23
+        19:00:55", "id": "CAB00016020", "chamber": "lower", "state": "ca", "session":
+        "20152016", "type": ["bill"], "subjects": ["Other"], "bill_id": "AB 731"},
+        {"title": "Validations.", "created_at": "2015-02-11 00:10:58", "updated_at":
+        "2015-09-23 18:58:08", "id": "CAB00015225", "chamber": "upper", "state": "ca",
+        "session": "20152016", "type": ["bill", "urgency"], "subjects": ["Other"],
+        "bill_id": "SB 182"}, {"title": "The County Employees Retirement Law of 1937.",
+        "created_at": "2015-03-01 00:14:37", "updated_at": "2015-09-23 19:01:32",
+        "id": "CAB00016674", "chamber": "lower", "state": "ca", "session": "20152016",
+        "type": ["bill"], "subjects": [], "bill_id": "AB 1291"}, {"title": "Fish and
+        wildlife.", "created_at": "2015-03-19 23:18:24", "updated_at": "2015-09-23
+        18:58:10", "id": "CAB00017190", "chamber": "lower", "state": "ca", "session":
+        "20152016", "type": ["bill", "fiscal committee", "local program"], "subjects":
+        ["Animal Rights and Wildlife Issues"], "bill_id": "AB 1527"}, {"title": "Public
+        resources.", "created_at": "2015-03-19 23:18:02", "updated_at": "2015-07-24
+        21:49:55", "id": "CAB00017183", "chamber": "lower", "state": "ca", "session":
+        "20152016", "type": ["bill"], "subjects": ["Public Services"], "bill_id":
+        "AB 1528"}, {"title": "Validations.", "created_at": "2015-02-11 00:10:52",
+        "updated_at": "2015-07-24 21:51:06", "id": "CAB00015217", "chamber": "upper",
+        "state": "ca", "session": "20152016", "type": ["bill"], "subjects": ["Legal
+        Issues"], "bill_id": "SB 183"}, {"title": "Validations.", "created_at": "2015-02-11
+        00:10:59", "updated_at": "2015-06-08 23:18:39", "id": "CAB00015226", "chamber":
+        "upper", "state": "ca", "session": "20152016", "type": ["bill", "urgency"],
+        "subjects": ["Other"], "bill_id": "SB 181"}]'
+    http_version: 
+  recorded_at: Mon, 07 Mar 2016 22:27:59 GMT
+recorded_with: VCR 3.0.1

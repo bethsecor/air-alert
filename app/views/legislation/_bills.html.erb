@@ -1,0 +1,25 @@
+<% unless @bills.nil? %>
+  <% unless @bills.empty? %>
+  <table>
+    <thead>
+      <tr>
+          <th data-field="bill">Bill</th>
+          <th data-field="title">Title</th>
+          <th data-field="session">Session</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.bill_id %></td>
+        <td><%= bill.title %></td>
+        <td><%= bill.session %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <%= "No results found." %>
+  <% end %>
+<% end %>
