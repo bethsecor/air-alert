@@ -37,6 +37,10 @@
    font-size: 1em;
  }
 
+ a {
+   color: #673ab7;
+ }
+
  .container {
    width: 85%;
    padding-bottom: 20px;
@@ -47,7 +51,7 @@
    color: #303f9f;
  }
 
- .air-quality-box {
+ .air-quality-box, .outdoor-alerts, .indoor-alerts, .legislation, .bill {
    background-color: white;
    border-radius: 25px;
    border-color: #26c6da;
