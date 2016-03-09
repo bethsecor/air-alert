@@ -28,6 +28,15 @@
     <p>
       <%= @air_quality.dominant_pollutant_text[:effects] %>
       <%= @air_quality.dominant_pollutant_text[:causes] %>
+      <br>
+      <% if params[:air_quality_search] %>
+        <%= link_to "Tweet", tweets_path(tweet: {message: "#{@air_quality.breezometer_description} in #{params[:air_quality_search][:address]}. #{@air_quality.random_recommendations[:outside]}"}),
+           method: :post, class: "btn cyan lighten-1 right" %>
+      <% else %>
+        <%= link_to "Tweet", tweets_path(tweet: {message: "#{@air_quality.breezometer_description} in #{current_user.location}. #{@air_quality.random_recommendations[:outside]}"}),
+           method: :post, class: "btn cyan lighten-1 right" %>
+      <% end %>
     </p>
+
   </div>
 </div>
