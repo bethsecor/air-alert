@@ -1,8 +1,6 @@
 <%= form_for :legislation, url: legislation_path, method: :get do |f| %>
-  <div class="input-field">
+  <div class="input-field col s12">
     <%= select_tag :state, options_for_select(us_states) %>
-    <%= f.label :state %>
   </div>
-  <br><br>
   <%= f.submit "Find those bills", class: "btn cyan lighten-1" %>
 <% end %>

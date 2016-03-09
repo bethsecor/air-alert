@@ -1,5 +1,7 @@
 <% unless @bills.nil? %>
   <% unless @bills.empty? %>
+  <br><br>
+  <h5>Recent <%= us_states.select { |full, abbr| abbr == params[:state].upcase }[0][0] %> Legislation:</h5>
   <table>
     <thead>
       <tr>

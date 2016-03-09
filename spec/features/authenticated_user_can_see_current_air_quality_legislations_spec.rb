@@ -18,7 +18,6 @@ RSpec.feature "AuthenticatedUserCanSeeCurrentAirQualityLegislations", type: :fea
       click_on "Find those bills"
 
       expect(page).to have_content("California Legislation:")
-      expect(page).to have_content("related to air quality")
     end
   end
 end
