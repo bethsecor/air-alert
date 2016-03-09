@@ -15,6 +15,12 @@ class SunlightService
     end
   end
 
+  def bill(bill_id)
+    Rails.cache.fetch("sunlight_bill_#{bill_id}", expires_in: 24.hours) do
+      parse(connection.get("bills/#{bill_id}/", { apikey: ENV["SUNLIGHT_KEY"] }))
+    end
+  end
+
   private
 
     def parse(response)
