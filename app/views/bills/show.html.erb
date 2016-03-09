@@ -1,5 +1,6 @@
 <div class="container">
-  <h4><%= link_to @bill.title, @bill.sources.first[:url] %></h4>
+  <h5><%= link_to @bill.title, @bill.sources.first[:url] %></h5>
+  <h5><%= @bill.state.upcase %>: <%= @bill.bill_id %></h5>
   <p>
     <%= @bill.summary %>
   </p>
