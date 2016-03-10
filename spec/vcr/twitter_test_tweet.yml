@@ -1,0 +1,158 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=Tweet%21
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.13.0
+      Authorization:
+      - OAuth oauth_consumer_key="W6iCIJrMEPqP7kVwAnpCBH9aH", oauth_nonce="c32b9f924dd597944adac1526fbc0ea9",
+        oauth_signature="oKqWt%2BJT7gbuO3QvqokOaZ0woe0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1457578632", oauth_token="961818270-fAYB7HkoKAdNhCQfyaLvkdRwfgp7HWbvr7CXOEzb",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '85'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Mar 2016 02:57:12 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Thu, 10 Mar 2016 02:57:12 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A145757863235746059; Domain=.twitter.com; Path=/; Expires=Sat,
+        10-Mar-2018 02:57:12 UTC
+      - lang=en; Path=/
+      Status:
+      - 403 Forbidden
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 1e575a4fc0f3d2b53f8bd2bdd8900c0b
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Response-Time:
+      - '21'
+      X-Transaction:
+      - 5f428517cda888de
+      X-Tsa-Request-Body-Time:
+      - '0'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":187,"message":"Status is a duplicate."}]}'
+    http_version: 
+  recorded_at: Thu, 10 Mar 2016 02:57:12 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.13.0
+      Authorization:
+      - OAuth oauth_consumer_key="W6iCIJrMEPqP7kVwAnpCBH9aH", oauth_nonce="741f7e0324a65aac3623fa0f3690ff37",
+        oauth_signature="1OHWGUCXK1aBQPVOhuaJ9wtNJNg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1457578632", oauth_token="961818270-fAYB7HkoKAdNhCQfyaLvkdRwfgp7HWbvr7CXOEzb",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '935'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Mar 2016 02:57:12 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Thu, 10 Mar 2016 02:57:12 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_a
+      Set-Cookie:
+      - guest_id=v1%3A145757863265339586; Domain=.twitter.com; Path=/; Expires=Sat,
+        10-Mar-2018 02:57:12 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - aa574a9f1ab1e91145ff5d2af1abe113
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '179'
+      X-Rate-Limit-Reset:
+      - '1457579532'
+      X-Response-Time:
+      - '32'
+      X-Transaction:
+      - 3b46f39ceafc6364
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"created_at":"Thu Mar 10 02:54:07 +0000 2016","id":707761422038503424,"id_str":"707761422038503424","text":"Tweet!","truncated":false,"source":"\u003ca
+        href=\"https:\/\/air-alert.herokuapp.com\/\" rel=\"nofollow\"\u003eAir Alert\u003c\/a\u003e","in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":961818270,"id_str":"961818270","name":"Beth
+        Secor","screen_name":"bethsecor","location":"Denver, CO","description":"student
+        @turingschool","url":"https:\/\/t.co\/xjNj51p7Bo","entities":{"url":{"urls":[{"url":"https:\/\/t.co\/xjNj51p7Bo","expanded_url":"http:\/\/bethsecor.github.io\/","display_url":"bethsecor.github.io","indices":[0,23]}]},"description":{"urls":[]}},"protected":false,"followers_count":65,"friends_count":218,"listed_count":3,"created_at":"Wed
+        Nov 21 05:44:37 +0000 2012","favourites_count":53,"utc_offset":-18000,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":true,"verified":false,"statuses_count":114,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"0099B9","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme4\/bg.gif","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme4\/bg.gif","profile_background_tile":false,"profile_image_url":"http:\/\/pbs.twimg.com\/profile_images\/667555694862729216\/fkHSIB-2_normal.jpg","profile_image_url_https":"https:\/\/pbs.twimg.com\/profile_images\/667555694862729216\/fkHSIB-2_normal.jpg","profile_banner_url":"https:\/\/pbs.twimg.com\/profile_banners\/961818270\/1433539065","profile_link_color":"9266CC","profile_sidebar_border_color":"FFFFFF","profile_sidebar_fill_color":"FFF7CC","profile_text_color":"0C3E53","profile_use_background_image":true,"has_extended_profile":false,"default_profile":false,"default_profile_image":false,"following":false,"follow_request_sent":false,"notifications":false},"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Thu, 10 Mar 2016 02:57:12 GMT
+recorded_with: VCR 3.0.1

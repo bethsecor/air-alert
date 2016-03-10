@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/bills/:bill_id', to: 'bills#show'
 
   resources :tweets, only: [:create]
+
+  get '/info', to: 'info#show'
 end

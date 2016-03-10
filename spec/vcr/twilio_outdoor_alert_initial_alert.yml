@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ACacbd98a93f543d9650fd723bc9141cf5:4532a2b33e08e7db1b8c126073245b88@api.twilio.com/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages.json
+    body:
+      encoding: US-ASCII
+      string: From=%2B15005550006&To=%2B13039315611&Body=Welcome+to+Air+Alerts%21+You+will+receive+air+quality+updates+for+Boston%2C+MA.
+    headers:
+      Accept:
+      - application/json
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - twilio-ruby/4.11.1 (ruby/x86_64-darwin14 2.2.3-p173)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 10 Mar 2016 02:20:30 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Request-Duration:
+      - '0.075'
+      Twilio-Request-Id:
+      - RQd4e004279541422299534015dfc20b46
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '834'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM40401c40a53f4a59a55a403fe730c7d6", "date_created": "Thu,
+        10 Mar 2016 02:20:30 +0000", "date_updated": "Thu, 10 Mar 2016 02:20:30 +0000",
+        "date_sent": null, "account_sid": "ACacbd98a93f543d9650fd723bc9141cf5", "to":
+        "+13039315611", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Welcome to Air Alerts! You will receive
+        air quality updates for Boston, MA.", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "uri": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM40401c40a53f4a59a55a403fe730c7d6.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACacbd98a93f543d9650fd723bc9141cf5/Messages/SM40401c40a53f4a59a55a403fe730c7d6/Media.json"}}'
+    http_version: 
+  recorded_at: Thu, 10 Mar 2016 02:20:30 GMT
+recorded_with: VCR 3.0.1
