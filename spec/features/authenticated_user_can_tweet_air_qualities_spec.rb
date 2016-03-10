@@ -23,7 +23,7 @@ RSpec.feature "AuthenticatedUserCanTweetAirQualities", type: :feature do
   it "can tweet the current air quality from searched location" do
     visit root_path
 
-    VCR.use_cassette("breezometer_service#air_quality") do
+    VCR.use_cassette("breezometer_service#air_quality_beijing") do
       click_on "Login with Twitter"
       visit airquality_path({air_quality_search: {address: "Beijing"}})
 

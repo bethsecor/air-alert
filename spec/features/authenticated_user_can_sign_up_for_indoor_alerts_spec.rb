@@ -33,4 +33,26 @@ RSpec.feature "AuthenticatedUserCanSignUpForIndoorAlerts", type: :feature do
       expect(page).to have_content(alert.phone.number)
     end
   end
+
+  it "a user cannot sign up for indoor alert without a name" do
+    visit root_path
+
+    VCR.use_cassette("breezometer_service#air_quality") do
+      click_on "Login with Twitter"
+
+      click_on "Manage Alerts"
+    end
+
+    expect(current_path).to eq alerts_path
+
+    click_on "Create Air Filter Replacement Reminder"
+    expect(current_path).to eq new_indoor_alert_path
+
+    fill_in "Air Filter Name", with: ""
+    fill_in "Remind me on:", with: "3/10/2016"
+    fill_in "Phone Number", with: ENV['VALID_PHONE']
+    click_on "Remind Me!"
+
+    expect(page).to have_content "Name can't be blank"
+  end
 end

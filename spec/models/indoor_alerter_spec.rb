@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe IndoorAlerter, type: :model do
-  # include ActiveSupport::Testing::TimeHelpers
   it "will alert on day filter needs to be reminded" do
     VCR.use_cassette("twilio#indoor_alerts") do
       today = DateTime.now
@@ -11,9 +10,9 @@ RSpec.describe IndoorAlerter, type: :model do
     end
 
     VCR.use_cassette("twilio#indoor_alerter") do
-      # travel_to DateTime.new(2016, 3, 7)
       alerts = IndoorAlerter.alert
       expect(alerts.length).to eq 2
+      expect(alerts.first).to eq "Sent from your Twilio trial account - Air Alert: Time to change the filter for Furnace!"
       expect(IndoorAlert.all.length).to eq 1
     end
   end
