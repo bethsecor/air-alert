@@ -14,4 +14,11 @@ RSpec.describe Location, type: :model do
       refute(location.valid?)
     end
   end
+
+  it "not valid if location not provided" do
+    VCR.use_cassette("breezometer_service#no_location") do
+      location = Location.new(address: "")
+      refute(location.valid?)
+    end
+  end
 end

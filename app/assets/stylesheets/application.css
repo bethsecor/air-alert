@@ -43,7 +43,7 @@
 
  .container {
    width: 85%;
-   padding-bottom: 20px;
+   padding-bottom: 50px;
  }
 
  .flash {
@@ -51,7 +51,7 @@
    color: #303f9f;
  }
 
- .air-quality-box, .outdoor-alerts, .indoor-alerts, .legislation, .bill {
+ .air-quality-box, .outdoor-alerts, .indoor-alerts, .legislation, .bill, .resources {
    background-color: white;
    border-radius: 25px;
    border-color: #26c6da;
@@ -95,4 +95,8 @@
 
 .error {
   color: red;
+}
+
+.cloud {
+  max-width: 100px;
 }

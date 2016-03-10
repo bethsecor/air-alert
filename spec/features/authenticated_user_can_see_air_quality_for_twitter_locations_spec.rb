@@ -8,7 +8,7 @@ RSpec.feature "AuthenticatedUserCanSeeAirQualityForTwitterLocations", type: :fea
   it "can see air quality for their twitter account location" do
     visit root_path
 
-    VCR.use_cassette("breezometer_service#air_quality") do
+    VCR.use_cassette("breezometer_service#air_quality_denver") do
       click_on "Login with Twitter"
       expect(current_path).to eq(airquality_path)
 

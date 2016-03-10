@@ -6,4 +6,22 @@ RSpec.describe Phone, type: :model do
 
     expect(phone.number).to eq "19999999999"
   end
+
+  it "cannot be saved without a number" do
+    phone = Phone.new(number: "")
+
+    refute(phone.valid?)
+  end
+
+  it "cannot be saved with a number that is too short" do
+    phone = Phone.new(number: "303")
+
+    refute(phone.valid?)
+  end
+
+  it "cannot be saved with a number that is too long" do
+    phone = Phone.new(number: "303303303303303")
+
+    refute(phone.valid?)
+  end
 end

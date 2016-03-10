@@ -1,8 +1,12 @@
 <nav>
   <div class="nav-wrapper">
+    <ul class="left">
+      <li class="cyan-text lighten-1-text">*  Welcome <%= current_user.name %>! *</li>
+    </ul>
     <a href="/airquality" class="brand-logo center cyan-text lighten-1-text">Air Alert</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><%= link_to "Manage Alerts", alerts_path, class: "cyan-text lighten-1-text" %></li>
+      <li><%= link_to "Info", info_path, class: "cyan-text lighten-1-text" %></li>
       <li><%= link_to "Legislation", legislation_path, class: "cyan-text lighten-1-text" %></li>
       <li><%= link_to "Logout", logout_path, method: :delete, class: "cyan-text lighten-1-text" %></li>
     </ul>

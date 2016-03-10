@@ -1,4 +1,5 @@
 class IndoorAlertsController < ApplicationController
+  before_action :authorize!
   before_action :find_indoor_alert_objects, only: [:edit, :destroy]
   rescue_from Twilio::REST::RequestError, with: :twilio_bad_request
 
