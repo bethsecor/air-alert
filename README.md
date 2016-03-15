@@ -2,7 +2,7 @@
 
 This application is extremely important for people who are sensitive to air pollution or care about the environment and want to know ways to reduce their impact on air pollution. Rather than having to manually check the air quality, this app will notify someone by text when the air quality is a certain level. A user can customize the alerts they get, and can also add alerts to remind them when they need to change indoor air filters. They can also tweet the air quality for any location. They can also look up recent legislation signed that is related to air quality for a specified US state.
 
-![air alert screencast](http://g.recordit.co/xRsLVuYdge.gif)
+![air alert screencast](https://s3.amazonaws.com/img0.recordit.co/xRsLVuYdge.mp4?AWSAccessKeyId=AKIAINSRFOQXTN4DT46A&Expires=1458080268&Signature=CiaBfSqsktqGfGxPLi%2FSWAhPMIU%3D)
 
 [http://air-alert.herokuapp.com/](http://air-alert.herokuapp.com/)
 
