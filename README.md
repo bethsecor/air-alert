@@ -6,6 +6,14 @@ This application is extremely important for people who are sensitive to air poll
 
 [http://air-alert.herokuapp.com/](http://air-alert.herokuapp.com/)
 
+##### Alerts
+
+Welcome messages:
+![welcome alerts](https://cloud.githubusercontent.com/assets/11467561/13793933/08c52e68-eabf-11e5-894f-6237d11da731.png)
+
+Air quality alerts:
+![text alerts](https://cloud.githubusercontent.com/assets/11467561/13793969/316598e4-eabf-11e5-99a3-d59fa1801c89.png)
+
 ##### Target Audience
 
 * People who are sensitive to air pollution (outdoor and indoor).
